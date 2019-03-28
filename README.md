@@ -20,15 +20,20 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Open in Observable](https://observablehq.com/@uwdata/data-types-graphical-marks-and-visual-encoding-channels)
    </small>
 
-3. Data Transformation - _coming soon!_
+3. Data Transformation<br/>
+   <small><em>coming soon!</em></small>
 
-4. Customizing Scales, Axes, and Legends - _coming soon!_
+4. Customizing Scales, Axes, and Legends<br/>
+   <small><em>coming soon!</em></small>
 
-5. Multi-View Composition - _coming soon!_
+5. Multi-View Composition<br/>
+   <small><em>coming soon!</em></small>
 
-6. Interaction - _coming soon!_
+6. Interaction<br/>
+   <small><em>coming soon!</em></small>
 
-7. Cartographic Visualization - _coming soon!_
+7. Cartographic Visualization<br/>
+   <small><em>coming soon!</em></small>
 
 ### Support
 
