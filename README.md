@@ -23,7 +23,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 3. Data Transformation<br/>
    <small><em>coming soon!</em></small>
 
-4. Customizing Scales, Axes, and Legends<br/>
+4. Scales, Axes, and Legends<br/>
    <small><em>coming soon!</em></small>
 
 5. Multi-View Composition<br/>
