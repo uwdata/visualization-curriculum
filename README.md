@@ -4,7 +4,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 ## Curriculum
 
-### Notebooks
+### Table of Contents
 
 1. Introduction to Vega-Lite / Altair<br/>
    <small>
@@ -56,7 +56,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 The visualization curriculum can be used either online or on your local computer.
 
 - To read JavaScript notebooks online using [Observable](https://observablehq.com/), click the "Observable" links above.
-- To read Python notebooks online using [Colab](https://colab.research.google.com/), click the "Colab" links above. You will need to authenticate with your GitHub account.
+- To read Python notebooks online using [Colab](https://colab.research.google.com/), click the "Colab" links above.
 - To read Python notebooks locally, follow the instructions below.
 
 ### Local Installation
