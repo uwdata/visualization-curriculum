@@ -1,6 +1,6 @@
 # Data Visualization Curriculum
 
-A data visualization curriculum of interactive notebooks, using [Vega-Lite](https://vega.github.io/vega-lite/) and [Altair](https://altair-viz.github.io/). This repository contains a series of Python-based Jupyter notebooks, a corresponding set of JavaScript notebooks are available online via [Observable](https://observablehq.com/).
+A data visualization curriculum of interactive notebooks, using [Vega-Lite](https://vega.github.io/vega-lite/) and [Altair](https://altair-viz.github.io/). This repository contains a series of Python-based Jupyter notebooks, a corresponding set of JavaScript notebooks are available online on [Observable](https://observablehq.com/@uwdata/data-visualization-curriculum).
 
 ## Curriculum
 
