@@ -65,6 +65,12 @@ The visualization curriculum can be used either online or on your local computer
 2. Copy this repository to your local filesystem using `git clone https://github.com/uwdata/altair-curriculum.git`.
 3. Open the notebooks in your local notebook environment. For example, if you have JupyterLab installed, run `jupyter lab` within the directory containing the notebooks.
 
+Depending on your programming environment, you may need to specify a particular [renderer](https://altair-viz.github.io/user_guide/renderers.html) for Altair.
+
+- If you are using __JupyterLab__, __Google Colab__, or __nteract__ you should not need to do anything &mdash; the correct renderer will be enabled by default.
+- If you are using __Jupyter Notebook__, you need to enable the notebook renderer by invoking the following code:
+  `alt.renderers.enable('notebook')`
+
 ## Credits
 
 Developed at the University of Washington by Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft. Thanks to the [UW Interactive Data Lab](https://idl.cs.washington.edu/) and Arvind Satyanarayan for their valuable input and feedback!
