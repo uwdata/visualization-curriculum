@@ -69,7 +69,7 @@ Depending on your programming environment, you may need to specify a particular 
 
 - If you are using __JupyterLab__, __Google Colab__, or __nteract__ you should not need to do anything &mdash; the correct renderer will be enabled by default.
 - If you are using __Jupyter Notebook__, you need to enable the notebook renderer by invoking the following code:
-  `alt.renderers.enable('notebook')`
+  `alt.renderers.enable('notebook')`. If this command fails with a `Value Error: to use the 'notebook' renderer...`, you may need to revert to an older version of vega (the current release v2.0.* is for the upcoming Altair v3.0): `conda install -c conda-forge vega=1.3` or `pip install vega==1.3` (full context [here](https://github.com/altair-viz/altair/issues/1114)).
 
 ## Credits
 
