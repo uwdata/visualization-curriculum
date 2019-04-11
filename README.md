@@ -35,7 +35,11 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
    </small>
 
 5. Multi-View Composition<br/>
-   <small><em>coming soon!</em></small>
+   <small>
+     [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
+     [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
+     [Open in Observable](https://observablehq.com/@uwdata/multi-view-composition)
+   </small>
 
 6. Interaction<br/>
    <small><em>coming soon!</em></small>
