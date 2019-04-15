@@ -42,7 +42,11 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
    </small>
 
 6. Interaction<br/>
-   <small><em>coming soon!</em></small>
+   <small>
+     [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
+     [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
+     [Open in Observable](https://observablehq.com/@uwdata/interaction)
+   </small>
 
 7. Cartographic Visualization<br/>
    <small><em>coming soon!</em></small>
