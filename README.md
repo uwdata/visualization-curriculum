@@ -69,15 +69,14 @@ The visualization curriculum can be used either online or on your local computer
 
 ### Local Installation
 
-1. [Install Altair and a notebook environment](https://altair-viz.github.io/getting_started/installation.html).
-2. Copy this repository to your local filesystem using `git clone https://github.com/uwdata/visualization-curriculum.git`.
-3. Open the notebooks in your local notebook environment. For example, if you have JupyterLab installed, run `jupyter lab` within the directory containing the notebooks.
+1. [Install Altair and a notebook environment](https://altair-viz.github.io/getting_started/installation.html). The notebooks are written for _Altair v3.2 or later_.
+2. Copy the curriculum repository to your local filesystem using `git clone https://github.com/uwdata/visualization-curriculum.git`.
+3. Open the notebooks in your local notebook environment. For example, if you have JupyterLab installed (v1.0 or higher is required), run `jupyter lab` within the directory containing the notebooks.
 
 Depending on your programming environment, you may need to specify a particular [renderer](https://altair-viz.github.io/user_guide/renderers.html) for Altair.
 
 - If you are using __JupyterLab__, __Google Colab__, or __nteract__ you should not need to do anything &mdash; the correct renderer will be enabled by default.
-- If you are using __Jupyter Notebook__, you need to enable the notebook renderer by invoking the following code:
-  `alt.renderers.enable('notebook')`. If this command fails with a `Value Error: to use the 'notebook' renderer...`, you may need to revert to an older version of vega (the current release v2.0.* is for the upcoming Altair v3.0): `conda install -c conda-forge vega=1.3` or `pip install vega==1.3` (full context [here](https://github.com/altair-viz/altair/issues/1114)).
+- If you are using __Jupyter Notebook__, you need to enable the notebook renderer by invoking the following code: `alt.renderers.enable('notebook')`.
 
 ## Credits
 
