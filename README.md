@@ -49,7 +49,10 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
    </small>
 
 7. Cartographic Visualization<br/>
-   <small><em>coming soon!</em></small>
+   <small>
+     <em>Jupyter notebook coming soon!</em> |
+     [Open in Observable](https://observablehq.com/@uwdata/cartographic-visualization)
+   </small>
 
 ### Support
 
