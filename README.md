@@ -50,7 +50,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 7. Cartographic Visualization<br/>
    <small>
-     <em>Jupyter notebook coming soon!</em> |
+     [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
+     [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
      [Open in Observable](https://observablehq.com/@uwdata/cartographic-visualization)
    </small>
 
