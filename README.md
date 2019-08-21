@@ -10,49 +10,56 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
    <small>
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
-     [Open in Observable](https://observablehq.com/@uwdata/introduction-to-vega-lite)
+     [Open in Observable](https://observablehq.com/@uwdata/introduction-to-vega-lite) |
+     [Open in Nextjournal](https://nextjournal.com/sdanisch/introduction-to-altair)
    </small>
 
 2. Data Types, Graphical Marks, and Visual Encoding Channels<br/>
    <small>
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
-     [Open in Observable](https://observablehq.com/@uwdata/data-types-graphical-marks-and-visual-encoding-channels)
+     [Open in Observable](https://observablehq.com/@uwdata/data-types-graphical-marks-and-visual-encoding-channels) |
+     [Open in Nextjournal](https://nextjournal.com/sdanisch/data-types-graphical-marks-and-visual-encoding-channels)
    </small>
 
 3. Data Transformation<br/>
    <small>
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
-     [Open in Observable](https://observablehq.com/@uwdata/data-transformation)
+     [Open in Observable](https://observablehq.com/@uwdata/data-transformation) |
+     [Open in Nextjournal](https://nextjournal.com/sdanisch/data-transformation)
    </small>
 
 4. Scales, Axes, and Legends<br/>
    <small>
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
-     [Open in Observable](https://observablehq.com/@uwdata/scales-axes-and-legends)
+     [Open in Observable](https://observablehq.com/@uwdata/scales-axes-and-legends) |
+     [Open in Nextjournal](https://nextjournal.com/sdanisch/scales-axes-and-legends)
    </small>
 
 5. Multi-View Composition<br/>
    <small>
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
-     [Open in Observable](https://observablehq.com/@uwdata/multi-view-composition)
+     [Open in Observable](https://observablehq.com/@uwdata/multi-view-composition) |
+     [Open in Nextjournal](https://nextjournal.com/sdanisch/multi-view-composition)
    </small>
 
 6. Interaction<br/>
    <small>
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
-     [Open in Observable](https://observablehq.com/@uwdata/interaction)
+     [Open in Observable](https://observablehq.com/@uwdata/interaction) |
+     [Open in Nextjournal](https://nextjournal.com/sdanisch/interaction)
    </small>
 
 7. Cartographic Visualization<br/>
    <small>
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
-     [Open in Observable](https://observablehq.com/@uwdata/cartographic-visualization)
+     [Open in Observable](https://observablehq.com/@uwdata/cartographic-visualization) |
+     [Open in Nextjournal](https://nextjournal.com/sdanisch/cartographic-visualization)
    </small>
 
 ### Support
@@ -61,6 +68,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
   <small>
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb)
+     [Open in Nextjournal](https://nextjournal.com/sdanisch/altair-debugging-guide)
   </small>
 
 ## Getting Started
@@ -69,6 +77,7 @@ The visualization curriculum can be used either online or on your local computer
 
 - To read JavaScript notebooks online using [Observable](https://observablehq.com/), click the "Observable" links above.
 - To read Python notebooks online using [Colab](https://colab.research.google.com/), click the "Colab" links above.
+- To run the notebooks using [Nextjournal](https://nextjournal.com), click the "Nextjournal" link and press "remix"
 - To read Python notebooks locally, follow the instructions below.
 
 ### Local Installation
