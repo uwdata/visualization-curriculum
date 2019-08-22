@@ -84,4 +84,4 @@ Depending on your programming environment, you may need to specify a particular 
 
 ## Credits
 
-Developed at the University of Washington by Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft. Thanks to the [UW Interactive Data Lab](https://idl.cs.washington.edu/) and Arvind Satyanarayan for their valuable input and feedback!
+Developed at the University of Washington by Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft. Thanks to the [UW Interactive Data Lab](https://idl.cs.washington.edu/) and Arvind Satyanarayan for their valuable input and feedback! Thanks also to the students of [UW CSE512 Spring 2019](https://courses.cs.washington.edu/courses/cse512/19sp/), the first group to use these notebooks within an integrated course curriculum.
