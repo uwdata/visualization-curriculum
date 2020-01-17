@@ -73,7 +73,7 @@ The visualization curriculum can be used either online or on your local computer
 
 ### Local Installation
 
-1. [Install Altair and a notebook environment](https://altair-viz.github.io/getting_started/installation.html). The notebooks are written for _Altair v3.2 or later_.
+1. [Install Altair and a notebook environment](https://altair-viz.github.io/getting_started/installation.html). The notebooks are written for _Altair v3.2_.
 2. Copy the curriculum repository to your local filesystem using `git clone https://github.com/uwdata/visualization-curriculum.git`.
 3. Open the notebooks in your local notebook environment. For example, if you have JupyterLab installed (v1.0 or higher is required), run `jupyter lab` within the directory containing the notebooks.
 
