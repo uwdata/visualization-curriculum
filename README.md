@@ -73,14 +73,11 @@ The visualization curriculum can be used either online or on your local computer
 
 ### Local Installation
 
-1. [Install Altair and a notebook environment](https://altair-viz.github.io/getting_started/installation.html). The notebooks are written for _Altair v3.2_.
-2. Copy the curriculum repository to your local filesystem using `git clone https://github.com/uwdata/visualization-curriculum.git`.
+1. [Install Altair and a notebook environment](https://altair-viz.github.io/getting_started/installation.html). The latest version of these notebooks uses _Altair version 4_.
+2. Download the curriculum notebooks from the [releases page](https://github.com/uwdata/visualization-curriculum/releases). Typically you will want to use the most recent release.  (If you wish to use notebooks for Altair version 3, download the [Altair v3.2 release](https://github.com/uwdata/visualization-curriculum/releases/tag/altair-v3).)
 3. Open the notebooks in your local notebook environment. For example, if you have JupyterLab installed (v1.0 or higher is required), run `jupyter lab` within the directory containing the notebooks.
 
-Depending on your programming environment, you may need to specify a particular [renderer](https://altair-viz.github.io/user_guide/renderers.html) for Altair.
-
-- If you are using __JupyterLab__, __Google Colab__, or __nteract__ you should not need to do anything &mdash; the correct renderer will be enabled by default.
-- If you are using __Jupyter Notebook__, you need to enable the notebook renderer by invoking the following code: `alt.renderers.enable('notebook')`.
+Depending on your programming environment (and whether or not you have a live internet connection), you may want to specify a particular [renderer](https://altair-viz.github.io/user_guide/display_frontends.html) for Altair.
 
 ## Credits
 
