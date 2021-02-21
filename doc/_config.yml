@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Visualization Curriculum
-author: UW Data
+author: Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft
 logo: idl-logo.png
 
 # Force re-execution of notebooks on each build.
