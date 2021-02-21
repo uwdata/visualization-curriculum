@@ -3,7 +3,8 @@
 
 title: Visualization Curriculum
 author: Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft
-logo: idl-logo.png
+logo: altair-hist.png
+# Logo created via https://vega.github.io/editor/#/url/vega-lite/N4Igxg9gdgZglgcxALlANzgUwO4tAZwBcAnCAa0xRBIEMp8AHG4zKQkAXwBoQaAPOPjwgExOABMAwhAA2EYlVr0mLNp24hxNQjWEBXYjKoALQoQb5kAeithxUAHQArfOMwy4aYg6iZCVqAYAWys0TAQaAFotHXw-fAABAEYrGJorIIgMTHxnfGhOHiDmMioAI2YQHlZIcTgoJFRwWXlheHdxKgBJAFkAEQAhAH0AJW16pB4y+uFivmn6FCSABg0ZcNZO5Cg9GRkefDAadeFiOgRKZABtEABiGDKwZYAmTp57x5e3u+WAZhoAJwwAAsVR+-yBoPewJgYF+MAA7GDbjC4YjkWVfpgAKywjFY3FgEAAXR4LDCxDiKBIekwHA0fGEhAAngxLiAAI56OiEOA6XlhMELWb8BZCZDPVY8doyLYgXqDUbjBpg-iCFA7PYHI4nJrkzCUy40ukaZlM1nsrk8vnjQU8GgIUThbTsyB6NT2gTizUyek8YyYRCmJbY5Y8AAkhwDxRMZgs1lCzocCD5xj0ZQccAgVijmGKiYikQ8hEwoWBDgAHA4knkChwgA
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
