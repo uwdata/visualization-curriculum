@@ -1,0 +1,16 @@
+- file: intro
+
+- part: Curriculum
+  numbered: true
+  chapters:
+  - file: altair_introduction
+  - file: altair_marks_encoding
+  - file: altair_data_transformation
+  - file: altair_scales_axes_legends
+  - file: altair_view_composition
+  - file: altair_interaction
+  - file: altair_cartographic
+
+- part: Support
+  chapters:
+  - file: altair_debugging
