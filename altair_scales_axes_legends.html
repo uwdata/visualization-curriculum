@@ -1,0 +1,2330 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Scales, Axes, and Legends &#8212; Visualization Curriculum</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Multi-View Composition" href="altair_view_composition.html" />
+    <link rel="prev" title="3. Data Transformation" href="altair_data_transformation.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/altair-hist.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Visualization Curriculum</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Curriculum
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="altair_introduction.html">
+   1. Introduction to Altair
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="altair_marks_encoding.html">
+   2. Data Types, Graphical Marks, and Visual Encoding Channels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="altair_data_transformation.html">
+   3. Data Transformation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Scales, Axes, and Legends
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="altair_view_composition.html">
+   5. Multi-View Composition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="altair_interaction.html">
+   6. Interaction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="altair_cartographic.html">
+   7. Cartographic Visualization
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Support
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="altair_debugging.html">
+   Altair Debugging Guide
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/altair_scales_axes_legends.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/uwdata/visualization-curriculum"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/uwdata/visualization-curriculum/issues/new?title=Issue%20on%20page%20%2Faltair_scales_axes_legends.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/uwdata/visualization-curriculum/master?urlpath=tree/altair_scales_axes_legends.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#antibiotics-data">
+   4.1. Antibiotics Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuring-scales-and-axes">
+   4.2. Configuring Scales and Axes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-antibiotic-resistance-adjusting-the-scale-type">
+     4.2.1. Plotting Antibiotic Resistance: Adjusting the Scale Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#styling-an-axis">
+     4.2.2. Styling an Axis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparing-antibiotics-adjusting-grid-lines-tick-counts-and-sizing">
+     4.2.3. Comparing Antibiotics: Adjusting Grid Lines, Tick Counts, and Sizing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuring-color-legends">
+   4.3. Configuring Color Legends
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-by-gram-staining">
+     4.3.1. Color by Gram Staining
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-by-species">
+     4.3.2. Color by Species
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-by-genus">
+     4.3.3. Color by Genus
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-by-antibiotic-response">
+     4.3.4. Color by Antibiotic Response
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   4.4. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="scales-axes-and-legends">
+<h1><span class="section-number">4. </span>Scales, Axes, and Legends<a class="headerlink" href="#scales-axes-and-legends" title="Permalink to this headline">¶</a></h1>
+<p>Visual encoding – mapping data to visual variables such as position, size, shape, or color – is the beating heart of data visualization. The workhorse that actually performs this mapping is the <em>scale</em>: a function that takes a data value as input (the scale <em>domain</em>) and returns a visual value, such as a pixel position or RGB color, as output (the scale <em>range</em>).  Of course, a visualization is useless if no one can figure out what it conveys! In addition to graphical marks, a chart needs reference elements, or <em>guides</em>, that allow readers to decode the graphic. Guides such as <em>axes</em> (which visualize scales with spatial ranges) and <em>legends</em> (which visualize scales with color, size, or shape ranges), are the unsung heroes of effective data visualization!</p>
+<p>In this notebook, we will explore the options Altair provides to support customized designs of scale mappings, axes, and legends, using a running example about the effectiveness of antibiotic drugs.</p>
+<p><em>This notebook is part of the <a class="reference external" href="https://github.com/uwdata/visualization-curriculum">data visualization curriculum</a>.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="antibiotics-data">
+<h2><span class="section-number">4.1. </span>Antibiotics Data<a class="headerlink" href="#antibiotics-data" title="Permalink to this headline">¶</a></h2>
+<p>After World War II, antibiotics were considered “wonder drugs”, as they were an easy remedy for what had been intractable ailments. To learn which drug worked most effectively for which bacterial infection, performance of the three most popular antibiotics on 16 bacteria were gathered.</p>
+<p>We will be using an antibiotics dataset from the <a class="reference external" href="https://github.com/vega/vega-datasets">vega-datasets collection</a>. In the examples below, we will pass the URL directly to Altair:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">antibiotics</span> <span class="o">=</span> <span class="s1">&#39;https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can first load the data with Pandas to view the dataset in its entirety and get acquainted with the available fields:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Bacteria</th>
+      <th>Penicillin</th>
+      <th>Streptomycin</th>
+      <th>Neomycin</th>
+      <th>Gram_Staining</th>
+      <th>Genus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Aerobacter aerogenes</td>
+      <td>870.000</td>
+      <td>1.00</td>
+      <td>1.600</td>
+      <td>negative</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bacillus anthracis</td>
+      <td>0.001</td>
+      <td>0.01</td>
+      <td>0.007</td>
+      <td>positive</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Brucella abortus</td>
+      <td>1.000</td>
+      <td>2.00</td>
+      <td>0.020</td>
+      <td>negative</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Diplococcus pneumoniae</td>
+      <td>0.005</td>
+      <td>11.00</td>
+      <td>10.000</td>
+      <td>positive</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Escherichia coli</td>
+      <td>100.000</td>
+      <td>0.40</td>
+      <td>0.100</td>
+      <td>negative</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Klebsiella pneumoniae</td>
+      <td>850.000</td>
+      <td>1.20</td>
+      <td>1.000</td>
+      <td>negative</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Mycobacterium tuberculosis</td>
+      <td>800.000</td>
+      <td>5.00</td>
+      <td>2.000</td>
+      <td>negative</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Proteus vulgaris</td>
+      <td>3.000</td>
+      <td>0.10</td>
+      <td>0.100</td>
+      <td>negative</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Pseudomonas aeruginosa</td>
+      <td>850.000</td>
+      <td>2.00</td>
+      <td>0.400</td>
+      <td>negative</td>
+      <td>other</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Salmonella (Eberthella) typhosa</td>
+      <td>1.000</td>
+      <td>0.40</td>
+      <td>0.008</td>
+      <td>negative</td>
+      <td>Salmonella</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Salmonella schottmuelleri</td>
+      <td>10.000</td>
+      <td>0.80</td>
+      <td>0.090</td>
+      <td>negative</td>
+      <td>Salmonella</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Staphylococcus albus</td>
+      <td>0.007</td>
+      <td>0.10</td>
+      <td>0.001</td>
+      <td>positive</td>
+      <td>Staphylococcus</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Staphylococcus aureus</td>
+      <td>0.030</td>
+      <td>0.03</td>
+      <td>0.001</td>
+      <td>positive</td>
+      <td>Staphylococcus</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Streptococcus fecalis</td>
+      <td>1.000</td>
+      <td>1.00</td>
+      <td>0.100</td>
+      <td>positive</td>
+      <td>Streptococcus</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Streptococcus hemolyticus</td>
+      <td>0.001</td>
+      <td>14.00</td>
+      <td>10.000</td>
+      <td>positive</td>
+      <td>Streptococcus</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Streptococcus viridans</td>
+      <td>0.005</td>
+      <td>10.00</td>
+      <td>40.000</td>
+      <td>positive</td>
+      <td>Streptococcus</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The numeric values in the table indicate the <a class="reference external" href="https://en.wikipedia.org/wiki/Minimum_inhibitory_concentration">minimum inhibitory concentration (MIC)</a>, a measure of the effectiveness of the antibiotic, which represents the concentration of antibiotic (in micrograms per milliliter) required to prevent growth in vitro. The reaction of the bacteria to a procedure called <a class="reference external" href="https://en.wikipedia.org/wiki/Gram_stain">Gram staining</a> is described by the nominal field <code class="docutils literal notranslate"><span class="pre">Gram_Staining</span></code>. Bacteria that turn dark blue or violet are Gram-positive. Otherwise, they are Gram-negative.</p>
+<p>As we examine different visualizations of this dataset, ask yourself: What might we learn about the relative effectiveness of the antibiotics? What might we learn about the bacterial species based on their antibiotic response?</p>
+</div>
+<div class="section" id="configuring-scales-and-axes">
+<h2><span class="section-number">4.2. </span>Configuring Scales and Axes<a class="headerlink" href="#configuring-scales-and-axes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plotting-antibiotic-resistance-adjusting-the-scale-type">
+<h3><span class="section-number">4.2.1. </span>Plotting Antibiotic Resistance: Adjusting the Scale Type<a class="headerlink" href="#plotting-antibiotic-resistance-adjusting-the-scale-type" title="Permalink to this headline">¶</a></h3>
+<p>Let’s start by looking at a simple dot plot of the MIC for Neomycin.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-6297c6933524415ab074189931f405a3"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-6297c6933524415ab074189931f405a3") {
+      outputDiv = document.getElementById("altair-viz-6297c6933524415ab074189931f405a3");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Neomycin"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>We can see that the MIC values span orders of magnitude: most points to cluster on the left, with a few large outliers to the right.</em></p>
+<p>By default Altair uses a <code class="docutils literal notranslate"><span class="pre">linear</span></code> mapping between the domain values (MIC) and the range values (pixels). To get a better overview of the data, we can apply a different scale transformation.</p>
+<p>To change the scale type, we’ll set the <code class="docutils literal notranslate"><span class="pre">scale</span></code> attribute, using the <code class="docutils literal notranslate"><span class="pre">alt.Scale</span></code> method and <code class="docutils literal notranslate"><span class="pre">type</span></code> parameter.</p>
+<p>Here’s the result of using a square root (<code class="docutils literal notranslate"><span class="pre">sqrt</span></code>) scale type. Distances in the pixel range now correspond to the square root of distances in the data domain.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;sqrt&#39;</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-2835ac2c1b6d41c084bdb78c39aad6c5"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-2835ac2c1b6d41c084bdb78c39aad6c5") {
+      outputDiv = document.getElementById("altair-viz-2835ac2c1b6d41c084bdb78c39aad6c5");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Neomycin", "scale": {"type": "sqrt"}}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>The points on the left are now better differentiated, but we still see some heavy skew.</em></p>
+<p>Let’s try using a <a class="reference external" href="https://en.wikipedia.org/wiki/Logarithmic_scale">logarithmic scale</a> (<code class="docutils literal notranslate"><span class="pre">log</span></code>) instead:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-4dd5cf5c9e9e4414936e61ce6117cb74"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-4dd5cf5c9e9e4414936e61ce6117cb74") {
+      outputDiv = document.getElementById("altair-viz-4dd5cf5c9e9e4414936e61ce6117cb74");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Neomycin", "scale": {"type": "log"}}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>Now the data is much more evenly distributed and we can see the very large differences in concentrations required for different bacteria.</em></p>
+<p>In a standard linear scale, a visual (pixel) distance of 10 units might correspond to an <em>addition</em> of 10 units in the data domain. A logarithmic transform maps between multiplication and addition, such that <code class="docutils literal notranslate"><span class="pre">log(u)</span> <span class="pre">+</span> <span class="pre">log(v)</span> <span class="pre">=</span> <span class="pre">log(u*v)</span></code>. As a result, in a logarithmic scale, a visual distance of 10 units instead corresponds to <em>multiplication</em> by 10 units in the data domain, assuming a base 10 logarithm. The <code class="docutils literal notranslate"><span class="pre">log</span></code> scale above defaults to using the logarithm base 10, but we can adjust this by providing a <code class="docutils literal notranslate"><span class="pre">base</span></code> parameter to the scale.</p>
+</div>
+<div class="section" id="styling-an-axis">
+<h3><span class="section-number">4.2.2. </span>Styling an Axis<a class="headerlink" href="#styling-an-axis" title="Permalink to this headline">¶</a></h3>
+<p>Lower dosages indicate higher effectiveness. However, some people may expect values that are “better” to be “up and to the right” within a chart. If we want to cater to this convention, we can reverse the axis to encode “effectiveness” as a reversed MIC scale.</p>
+<p>To do this, we can set the encoding <code class="docutils literal notranslate"><span class="pre">sort</span></code> property to <code class="docutils literal notranslate"><span class="pre">'descending'</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-c52079d87f77480997b5ec0f829ff3c0"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-c52079d87f77480997b5ec0f829ff3c0") {
+      outputDiv = document.getElementById("altair-viz-c52079d87f77480997b5ec0f829ff3c0");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Neomycin", "scale": {"type": "log"}, "sort": "descending"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>Unfortunately the axis is starting to get a bit confusing: we’re plotting data on a logarithmic scale, in the reverse direction, and without a clear indication of what our units are!</em></p>
+<p>Let’s add a more informative axis title: we’ll use the <code class="docutils literal notranslate"><span class="pre">title</span></code> property of the encoding to provide the desired title text:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-0cd3b2731d5944eaa49fffb46a64b11f"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-0cd3b2731d5944eaa49fffb46a64b11f") {
+      outputDiv = document.getElementById("altair-viz-0cd3b2731d5944eaa49fffb46a64b11f");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Neomycin", "scale": {"type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Much better!</p>
+<p>By default, Altair places the x-axis along the bottom of the chart. To change these defaults, we can add an <code class="docutils literal notranslate"><span class="pre">axis</span></code> attribute with <code class="docutils literal notranslate"><span class="pre">orient='top'</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-be2444a6269b4622b302f82473f96af7"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-be2444a6269b4622b302f82473f96af7") {
+      outputDiv = document.getElementById("altair-viz-be2444a6269b4622b302f82473f96af7");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "axis": {"orient": "top"}, "field": "Neomycin", "scale": {"type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Similarly, the y-axis defaults to a <code class="docutils literal notranslate"><span class="pre">'left'</span></code> orientation, but can be set to <code class="docutils literal notranslate"><span class="pre">'right'</span></code>.</p>
+</div>
+<div class="section" id="comparing-antibiotics-adjusting-grid-lines-tick-counts-and-sizing">
+<h3><span class="section-number">4.2.3. </span>Comparing Antibiotics: Adjusting Grid Lines, Tick Counts, and Sizing<a class="headerlink" href="#comparing-antibiotics-adjusting-grid-lines-tick-counts-and-sizing" title="Permalink to this headline">¶</a></h3>
+<p><em>How does neomycin compare to other antibiotics, such as streptomycin and penicillin?</em></p>
+<p>To start answering this question, we can create scatter plots, adding a y-axis encoding for another antibiotic that mirrors the design of our x-axis for neomycin.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Streptomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Streptomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-56ba94924e1d47dabb83ffafda245a0f"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-56ba94924e1d47dabb83ffafda245a0f") {
+      outputDiv = document.getElementById("altair-viz-56ba94924e1d47dabb83ffafda245a0f");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Neomycin", "scale": {"type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "field": "Streptomycin", "scale": {"type": "log"}, "sort": "descending", "title": "Streptomycin MIC (\u03bcg/ml, reverse log scale)"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>We can see that neomycin and streptomycin appear highly correlated, as the bacterial strains respond similarly to both antibiotics.</em></p>
+<p>Let’s move on and compare neomycin with penicillin:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-153776aac81841ebacb293de2aee720b"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-153776aac81841ebacb293de2aee720b") {
+      outputDiv = document.getElementById("altair-viz-153776aac81841ebacb293de2aee720b");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Neomycin", "scale": {"type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "field": "Penicillin", "scale": {"type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>Now we see a more differentiated response: some bacteria respond well to neomycin but not penicillin, and vice versa!</em></p>
+<p>While this plot is useful, we can make it better. The x and y axes use the same units, but have different extents (the chart width is larger than the height) and different domains (0.001 to 100 for the x-axis, and 0.001 to 1,000 for the y-axis).</p>
+<p>Let’s equalize the axes: we can add explicit <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> settings for the chart, and specify matching domains  using the scale <code class="docutils literal notranslate"><span class="pre">domain</span></code> property.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-4098d49873614ffeb7a4d3d015f758f6"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-4098d49873614ffeb7a4d3d015f758f6") {
+      outputDiv = document.getElementById("altair-viz-4098d49873614ffeb7a4d3d015f758f6");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>The resulting plot is more balanced, and less prone to subtle misinterpretations!</em></p>
+<p>However, the grid lines are now rather dense. If we want to remove grid lines altogether, we can add <code class="docutils literal notranslate"><span class="pre">grid=False</span></code> to the <code class="docutils literal notranslate"><span class="pre">axis</span></code> attribute. But what if we instead want to reduce the number of tick marks, for example only including grid lines for each order of magnitude?</p>
+<p>To change the number of ticks, we can specify a target <code class="docutils literal notranslate"><span class="pre">tickCount</span></code> property for an <code class="docutils literal notranslate"><span class="pre">Axis</span></code> object. The <code class="docutils literal notranslate"><span class="pre">tickCount</span></code> is treated as a <em>suggestion</em> to Altair, to be considered alongside other aspects such as using nice, human-friendly intervals. We may not get <em>exactly</em> the number of tick marks we request, but we should get something close.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-73f55f50ef8f4a20ad0d18ee1c8f4c20"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-73f55f50ef8f4a20ad0d18ee1c8f4c20") {
+      outputDiv = document.getElementById("altair-viz-73f55f50ef8f4a20ad0d18ee1c8f4c20");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "circle", "encoding": {"x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>By setting the <code class="docutils literal notranslate"><span class="pre">tickCount</span></code> to 5, we have the desired effect.</p>
+<p>Our scatter plot points feel a bit small. Let’s change the default size by setting the <code class="docutils literal notranslate"><span class="pre">size</span></code> property of the circle mark. This size value is the <em>area</em> of the mark in pixels.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span> 
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-f30161accccb45aa9bc6f4b211bad5ce"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-f30161accccb45aa9bc6f4b211bad5ce") {
+      outputDiv = document.getElementById("altair-viz-f30161accccb45aa9bc6f4b211bad5ce");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Here we’ve set the circle mark area to 80 pixels. <em>Further adjust the value as you see fit!</em></p>
+</div>
+</div>
+<div class="section" id="configuring-color-legends">
+<h2><span class="section-number">4.3. </span>Configuring Color Legends<a class="headerlink" href="#configuring-color-legends" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="color-by-gram-staining">
+<h3><span class="section-number">4.3.1. </span>Color by Gram Staining<a class="headerlink" href="#color-by-gram-staining" title="Permalink to this headline">¶</a></h3>
+<p><em>Above we saw that neomycin is more effective for some bacteria, while penicillin is more effective for others. But how can we tell which antibiotic to use if we don’t know the specific species of bacteria? Gram staining serves as a diagnostic for discriminating classes of bacteria!</em></p>
+<p>Let’s encode <code class="docutils literal notranslate"><span class="pre">Gram_Staining</span></code> on the <code class="docutils literal notranslate"><span class="pre">color</span></code> channel as a nominal data type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Gram_Staining:N&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-6acde514a560408b99c5c3e1684face9"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-6acde514a560408b99c5c3e1684face9") {
+      outputDiv = document.getElementById("altair-viz-6acde514a560408b99c5c3e1684face9");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "nominal", "field": "Gram_Staining"}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>We can see that Gram-positive bacteria seem most susceptible to penicillin, whereas neomycin is more effective for Gram-negative bacteria!</em></p>
+<p>The color scheme above was automatically chosen to provide perceptually-distinguishable colors for nominal (equal or not equal) comparisons. However, we might wish to customize the colors used. In this case, Gram staining results in <a class="reference external" href="https://en.wikipedia.org/wiki/Gram_stain#/media/File:Gram_stain_01.jpg">distinctive physical colorings: pink for Gram-negative, purple for Gram-positive</a>.</p>
+<p>Let’s use those colors by specifying an explicit scale mapping from the data <code class="docutils literal notranslate"><span class="pre">domain</span></code> to the color <code class="docutils literal notranslate"><span class="pre">range</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Gram_Staining:N&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;negative&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">],</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hotpink&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">])</span>
+    <span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-361ccf16ccab4c1989b9317effa03b3d"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-361ccf16ccab4c1989b9317effa03b3d") {
+      outputDiv = document.getElementById("altair-viz-361ccf16ccab4c1989b9317effa03b3d");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "nominal", "field": "Gram_Staining", "scale": {"domain": ["negative", "positive"], "range": ["hotpink", "purple"]}}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>By default legends are placed on the right side of the chart. Similar to axes, we can change the legend orientation using the <code class="docutils literal notranslate"><span class="pre">orient</span></code> parameter:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Gram_Staining:N&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;negative&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">],</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hotpink&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">]),</span>
+          <span class="n">legend</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Legend</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-77172a8a5f564b5dbe489c67aaac1087"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-77172a8a5f564b5dbe489c67aaac1087") {
+      outputDiv = document.getElementById("altair-viz-77172a8a5f564b5dbe489c67aaac1087");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "nominal", "field": "Gram_Staining", "legend": {"orient": "left"}, "scale": {"domain": ["negative", "positive"], "range": ["hotpink", "purple"]}}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>We can also remove a legend entirely by specifying <code class="docutils literal notranslate"><span class="pre">legend=None</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Gram_Staining:N&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;negative&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">],</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hotpink&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">]),</span>
+          <span class="n">legend</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-82bf5ee5081140fd9dca03e7ad997ba5"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-82bf5ee5081140fd9dca03e7ad997ba5") {
+      outputDiv = document.getElementById("altair-viz-82bf5ee5081140fd9dca03e7ad997ba5");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "nominal", "field": "Gram_Staining", "legend": null, "scale": {"domain": ["negative", "positive"], "range": ["hotpink", "purple"]}}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+</div>
+<div class="section" id="color-by-species">
+<h3><span class="section-number">4.3.2. </span>Color by Species<a class="headerlink" href="#color-by-species" title="Permalink to this headline">¶</a></h3>
+<p><em>So far we’ve considered the effectiveness of antibiotics. Let’s turn around and ask a different question: what might antibiotic response teach us about the different species of bacteria?</em></p>
+<p>To start, let’s encode <code class="docutils literal notranslate"><span class="pre">Bacteria</span></code> (a nominal data field) using the <code class="docutils literal notranslate"><span class="pre">color</span></code> channel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Bacteria:N&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-9965947aa1db4375920d14286dea5249"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-9965947aa1db4375920d14286dea5249") {
+      outputDiv = document.getElementById("altair-viz-9965947aa1db4375920d14286dea5249");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "nominal", "field": "Bacteria"}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>The result is a bit of a mess!</em> There are enough unique bacteria that Altair starts repeating colors from its default 10-color palette for nominal values.</p>
+<p>To use custom colors, we can update the color encoding <code class="docutils literal notranslate"><span class="pre">scale</span></code> property. One option is to provide explicit scale <code class="docutils literal notranslate"><span class="pre">domain</span></code> and <code class="docutils literal notranslate"><span class="pre">range</span></code> values to indicate the precise color mappings per value, as we did above for Gram staining. Another option is to use an alternative color scheme. Altair includes a variety of built-in color schemes. For a complete list, see the <a class="reference external" href="https://vega.github.io/vega/docs/schemes/#reference">Vega color scheme documentation</a>.</p>
+<p>Let’s try switching to a built-in 20-color scheme, <code class="docutils literal notranslate"><span class="pre">tableau20</span></code>, and set that using the scale <code class="docutils literal notranslate"><span class="pre">scheme</span></code> property.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Bacteria:N&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;tableau20&#39;</span><span class="p">))</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-9118a872ee1a4d08a08d742c2717155c"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-9118a872ee1a4d08a08d742c2717155c") {
+      outputDiv = document.getElementById("altair-viz-9118a872ee1a4d08a08d742c2717155c");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "nominal", "field": "Bacteria", "scale": {"scheme": "tableau20"}}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>We now have a unique color for each bacteria, but the chart is still a mess. Among other issues, the encoding takes no account of bacteria that belong to the same genus. In the chart above, the two different Salmonella strains have very different hues (teal and pink), despite being biological cousins.</em></p>
+<p>To try a different scheme, we can also change the data type from nominal to ordinal. The default ordinal scheme uses blue shades, ramping from light to dark:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Bacteria:O&#39;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-1c65b31ec74b44089c681c2e31fb3d9e"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-1c65b31ec74b44089c681c2e31fb3d9e") {
+      outputDiv = document.getElementById("altair-viz-1c65b31ec74b44089c681c2e31fb3d9e");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "ordinal", "field": "Bacteria"}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>Some of those blue shades may be hard to distinguish.</em></p>
+<p>For more differentiated colors, we can experiment with alternatives to the default <code class="docutils literal notranslate"><span class="pre">blues</span></code> color scheme. The <code class="docutils literal notranslate"><span class="pre">viridis</span></code> scheme ramps through both hue and luminance:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Bacteria:O&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">))</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-7427f8771e3f48a993f041707156fe5b"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-7427f8771e3f48a993f041707156fe5b") {
+      outputDiv = document.getElementById("altair-viz-7427f8771e3f48a993f041707156fe5b");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "ordinal", "field": "Bacteria", "scale": {"scheme": "viridis"}}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>Bacteria from the same genus now have more similar colors than before, but the chart still remains confusing. There are many colors, they are hard to look up in the legend accurately, and two bacteria may have similar colors but different genus.</em></p>
+</div>
+<div class="section" id="color-by-genus">
+<h3><span class="section-number">4.3.3. </span>Color by Genus<a class="headerlink" href="#color-by-genus" title="Permalink to this headline">¶</a></h3>
+<p>Let’s try to color by genus instead of bacteria. To do so, we will add a <code class="docutils literal notranslate"><span class="pre">calculate</span></code> transform that splits up the bacteria name on space characters and takes the first word in the resulting array. We can then encode the resulting <code class="docutils literal notranslate"><span class="pre">Genus</span></code> field using the <code class="docutils literal notranslate"><span class="pre">tableau20</span></code> color scheme.</p>
+<p>(Note that the antibiotics dataset includes a pre-calculated <code class="docutils literal notranslate"><span class="pre">Genus</span></code> field, but we will ignore it here in order to further explore Altair’s data transformations.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">transform_calculate</span><span class="p">(</span>
+    <span class="n">Genus</span><span class="o">=</span><span class="s1">&#39;split(datum.Bacteria, &quot; &quot;)[0]&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Genus:N&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;tableau20&#39;</span><span class="p">))</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-be8767d4ff6943af950921c60f6dc962"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-be8767d4ff6943af950921c60f6dc962") {
+      outputDiv = document.getElementById("altair-viz-be8767d4ff6943af950921c60f6dc962");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "nominal", "field": "Genus", "scale": {"scheme": "tableau20"}}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "transform": [{"calculate": "split(datum.Bacteria, \" \")[0]", "as": "Genus"}], "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>Hmm… While the data are better segregated by genus, this cacapohony of colors doesn’t seem particularly useful.</em></p>
+<p><em>If we look at some of the previous charts carefully, we can see that only a handful of bacteria have a genus shared with another bacteria: Salmonella, Staphylococcus, and Streptococcus. To focus our comparison, we might add colors only for these repeated genus values.</em></p>
+<p>Let’s add another <code class="docutils literal notranslate"><span class="pre">calculate</span></code> transform that takes a genus name, keeps it if it is one of the repeated values, and otherwise uses the string <code class="docutils literal notranslate"><span class="pre">&quot;Other&quot;</span></code>.</p>
+<p>In addition, we can add custom color encodings using explicit <code class="docutils literal notranslate"><span class="pre">domain</span></code> and <code class="docutils literal notranslate"><span class="pre">range</span></code> arrays for the color encoding <code class="docutils literal notranslate"><span class="pre">scale</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">transform_calculate</span><span class="p">(</span>
+  <span class="n">Split</span><span class="o">=</span><span class="s1">&#39;split(datum.Bacteria, &quot; &quot;)[0]&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">transform_calculate</span><span class="p">(</span>
+  <span class="n">Genus</span><span class="o">=</span><span class="s1">&#39;indexof([&quot;Salmonella&quot;, &quot;Staphylococcus&quot;, &quot;Streptococcus&quot;], datum.Split) &gt;= 0 ? datum.Split : &quot;Other&quot;&#39;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Neomycin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Neomycin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+          <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]),</span>
+          <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml, reverse log scale)&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Genus:N&#39;</span><span class="p">,</span>
+          <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span>
+            <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Salmonella&#39;</span><span class="p">,</span> <span class="s1">&#39;Staphylococcus&#39;</span><span class="p">,</span> <span class="s1">&#39;Streptococcus&#39;</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">],</span>
+            <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;rgb(76,120,168)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(84,162,75)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(228,87,86)&#39;</span><span class="p">,</span> <span class="s1">&#39;rgb(121,112,110)&#39;</span><span class="p">]</span>
+          <span class="p">))</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-9a74c64fe88648fbb1352526d88734ea"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-9a74c64fe88648fbb1352526d88734ea") {
+      outputDiv = document.getElementById("altair-viz-9a74c64fe88648fbb1352526d88734ea");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"type": "nominal", "field": "Genus", "scale": {"domain": ["Salmonella", "Staphylococcus", "Streptococcus", "Other"], "range": ["rgb(76,120,168)", "rgb(84,162,75)", "rgb(228,87,86)", "rgb(121,112,110)"]}}, "x": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Neomycin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Neomycin MIC (\u03bcg/ml, reverse log scale)"}, "y": {"type": "quantitative", "axis": {"tickCount": 5}, "field": "Penicillin", "scale": {"domain": [0.001, 1000], "type": "log"}, "sort": "descending", "title": "Penicillin MIC (\u03bcg/ml, reverse log scale)"}}, "height": 250, "transform": [{"calculate": "split(datum.Bacteria, \" \")[0]", "as": "Split"}, {"calculate": "indexof([\"Salmonella\", \"Staphylococcus\", \"Streptococcus\"], datum.Split) >= 0 ? datum.Split : \"Other\"", "as": "Genus"}], "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p><em>We now have a much more revealing plot, made possible by customizations to the axes and legend. Take a moment to examine the plot above. Notice any surprising groupings?</em></p>
+<p><em>The upper-left region has a cluster of red Streptococcus bacteria, but with a grey Other bacteria alongside them. Meanwhile, towards the middle-right we see another red Streptococcus placed far away from it’s “cousins”. Might we expect bacteria from the same genus (and thus presumably more genetically similar) to be grouped closer together?</em></p>
+<p>As it so happens, the underlying dataset actually contains errors. The dataset reflects the species designations used in the early 1950s. However, the scientific consensus has since been overturned. That gray point in the upper-left? It’s now considered a Streptococcus! That red point towards the middle-right? It’s no longer considered a Streptococcus!</p>
+<p>Of course, on its own, this dataset doesn’t fully justify these reclassifications. Nevertheless, the data contain valuable biological clues that went overlooked for decades! Visualization, when used by an appropriately skilled and inquisitive viewer, can be a powerful tool for discovery.</p>
+<p>This example also reinforces an important lesson: <strong><em>always be skeptical of your data!</em></strong></p>
+</div>
+<div class="section" id="color-by-antibiotic-response">
+<h3><span class="section-number">4.3.4. </span>Color by Antibiotic Response<a class="headerlink" href="#color-by-antibiotic-response" title="Permalink to this headline">¶</a></h3>
+<p>We might also use the <code class="docutils literal notranslate"><span class="pre">color</span></code> channel to encode quantitative values. Though keep in mind that typically color is not as effective for conveying quantities as position or size encodings!</p>
+<p>Here is a basic heatmap of penicillin MIC values for each bacteria. We’ll use a <code class="docutils literal notranslate"><span class="pre">rect</span></code> mark and sort the bacteria by descending MIC values (from most to least resistant):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Bacteria:N&#39;</span><span class="p">,</span>
+      <span class="n">sort</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">EncodingSortField</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s1">&#39;Penicillin&#39;</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-055323c75fbd4bea9776023a62873dd0"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-055323c75fbd4bea9776023a62873dd0") {
+      outputDiv = document.getElementById("altair-viz-055323c75fbd4bea9776023a62873dd0");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "rect", "encoding": {"color": {"type": "quantitative", "field": "Penicillin"}, "y": {"type": "nominal", "field": "Bacteria", "sort": {"field": "Penicillin", "op": "max", "order": "descending"}}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>We can further improve this chart by combining features we’ve seen thus far: a log-transformed scale, a change of axis orientation, a custom color scheme (<code class="docutils literal notranslate"><span class="pre">plasma</span></code>), tick count adjustment, and custom title text. We’ll also exercise configuration options to adjust the axis title placement and legend title alignment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Bacteria:N&#39;</span><span class="p">,</span>
+      <span class="n">sort</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">EncodingSortField</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s1">&#39;Penicillin&#39;</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">),</span>
+      <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span>
+        <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>     <span class="c1"># orient axis on right side of chart</span>
+        <span class="n">titleX</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>           <span class="c1"># set x-position to 7 pixels right of chart</span>
+        <span class="n">titleY</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span>          <span class="c1"># set y-position to 2 pixels above chart</span>
+        <span class="n">titleAlign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>  <span class="c1"># use left-aligned text</span>
+        <span class="n">titleAngle</span><span class="o">=</span><span class="mi">0</span>        <span class="c1"># undo default title rotation</span>
+      <span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+      <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span> <span class="n">nice</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+      <span class="n">legend</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Legend</span><span class="p">(</span><span class="n">titleOrient</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+      <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml)&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-4780542bc0db4139bbda8196849c8c81"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-4780542bc0db4139bbda8196849c8c81") {
+      outputDiv = document.getElementById("altair-viz-4780542bc0db4139bbda8196849c8c81");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "rect", "encoding": {"color": {"type": "quantitative", "field": "Penicillin", "legend": {"tickCount": 5, "titleOrient": "right"}, "scale": {"nice": true, "scheme": "plasma", "type": "log"}, "title": "Penicillin MIC (\u03bcg/ml)"}, "y": {"type": "nominal", "axis": {"orient": "right", "titleAlign": "left", "titleAngle": 0, "titleX": 7, "titleY": -2}, "field": "Bacteria", "sort": {"field": "Penicillin", "op": "max", "order": "descending"}}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Alternatively, we can remove the axis title altogether, and use the top-level <code class="docutils literal notranslate"><span class="pre">title</span></code> property to add a title for the entire chart:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">antibiotics</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin Resistance of Bacterial Strains&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Bacteria:N&#39;</span><span class="p">,</span>
+      <span class="n">sort</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">EncodingSortField</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s1">&#39;Penicillin&#39;</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;descending&#39;</span><span class="p">),</span>
+      <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Penicillin:Q&#39;</span><span class="p">,</span>
+      <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span> <span class="n">nice</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+      <span class="n">legend</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Legend</span><span class="p">(</span><span class="n">titleOrient</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">tickCount</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+      <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Penicillin MIC (μg/ml)&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">configure_title</span><span class="p">(</span>
+  <span class="n">anchor</span><span class="o">=</span><span class="s1">&#39;start&#39;</span><span class="p">,</span> <span class="c1"># anchor and left-align title</span>
+  <span class="n">offset</span><span class="o">=</span><span class="mi">5</span>        <span class="c1"># set title offset from chart</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-c9842c289d1f41e1b9207c5bfc5f6966"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-c9842c289d1f41e1b9207c5bfc5f6966") {
+      outputDiv = document.getElementById("altair-viz-c9842c289d1f41e1b9207c5bfc5f6966");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "title": {"anchor": "start", "offset": 5}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/burtin.json"}, "mark": "rect", "encoding": {"color": {"type": "quantitative", "field": "Penicillin", "legend": {"tickCount": 5, "titleOrient": "right"}, "scale": {"nice": true, "scheme": "plasma", "type": "log"}, "title": "Penicillin MIC (\u03bcg/ml)"}, "y": {"type": "nominal", "axis": {"orient": "right", "title": null}, "field": "Bacteria", "sort": {"field": "Penicillin", "op": "max", "order": "descending"}}}, "title": "Penicillin Resistance of Bacterial Strains", "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">4.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Integrating what we’ve learned across the notebooks so far about encodings, data transforms, and customization, you should now be prepared to make a wide variety of statistical graphics. Now you can put Altair into everyday use for exploring and communicating data!</p>
+<p>Interested in learning more about this topic?</p>
+<ul class="simple">
+<li><p>Start with the <a class="reference external" href="https://altair-viz.github.io/user_guide/customization.html">Altair Customizing Visualizations documentation</a>.</p></li>
+<li><p>For a complementary discussion of scale mappings, see <a class="reference external" href="https://medium.com/&#64;mbostock/introducing-d3-scale-61980c51545f">“Introducing d3-scale”</a>.</p></li>
+<li><p>For a more in-depth exploration of all the ways axes and legends can be styled by the underlying Vega library (which powers Altair and Vega-Lite), see <a class="reference external" href="https://beta.observablehq.com/&#64;jheer/a-guide-to-guides-axes-legends-in-vega">“A Guide to Guides: Axes &amp; Legends in Vega”</a>.</p></li>
+<li><p>For a fascinating history of the antibiotics dataset, see <a class="reference external" href="https://www.americanscientist.org/article/thats-funny">Wainer &amp; Lysen’s “That’s Funny…”</a> in the <em>American Scientist</em>.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="altair_data_transformation.html" title="previous page"><span class="section-number">3. </span>Data Transformation</a>
+    <a class='right-next' id="next-link" href="altair_view_composition.html" title="next page"><span class="section-number">5. </span>Multi-View Composition</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
