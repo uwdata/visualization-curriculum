@@ -1,6 +1,6 @@
 # Data Visualization Curriculum
 
-A data visualization curriculum of interactive notebooks, using [Vega-Lite](https://vega.github.io/vega-lite/) and [Altair](https://altair-viz.github.io/). This repository contains a series of Python-based Jupyter notebooks, a corresponding set of JavaScript notebooks are available online on [Observable](https://observablehq.com/@uwdata/data-visualization-curriculum).
+A data visualization curriculum of interactive notebooks, using [Vega-Lite](https://vega.github.io/vega-lite/) and [Altair](https://altair-viz.github.io/). This repository contains a series of Python-based Jupyter notebooks. The notebooks are online in a [Jupyter book](https://uwdata.github.io/visualization-curriculum/intro.html). A corresponding set of JavaScript notebooks are available online on [Observable](https://observablehq.com/@uwdata/data-visualization-curriculum).
 
 ## Curriculum
 
@@ -8,6 +8,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 1. Introduction to Vega-Lite / Altair<br/>
    <small>
+     [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_introduction.html) |
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
      [Open in Observable](https://observablehq.com/@uwdata/introduction-to-vega-lite)
@@ -15,6 +16,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 2. Data Types, Graphical Marks, and Visual Encoding Channels<br/>
    <small>
+     [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_marks_encoding.html) |
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
      [Open in Observable](https://observablehq.com/@uwdata/data-types-graphical-marks-and-visual-encoding-channels)
@@ -22,6 +24,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 3. Data Transformation<br/>
    <small>
+     [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_data_transformation.html) |
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
      [Open in Observable](https://observablehq.com/@uwdata/data-transformation)
@@ -29,6 +32,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 4. Scales, Axes, and Legends<br/>
    <small>
+     [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_scales_axes_legends.html) |
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
      [Open in Observable](https://observablehq.com/@uwdata/scales-axes-and-legends)
@@ -36,6 +40,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 5. Multi-View Composition<br/>
    <small>
+     [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_view_composition.html) |
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
      [Open in Observable](https://observablehq.com/@uwdata/multi-view-composition)
@@ -43,6 +48,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 6. Interaction<br/>
    <small>
+     [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_interaction.html) |
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
      [Open in Observable](https://observablehq.com/@uwdata/interaction)
@@ -50,6 +56,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 7. Cartographic Visualization<br/>
    <small>
+     [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_cartographic.html) |
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
      [Open in Observable](https://observablehq.com/@uwdata/cartographic-visualization)
@@ -59,6 +66,7 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 
 - Altair Debugging Guide<br/>
   <small>
+     [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_debugging.html) |
      [Jupyter Notebook](https://github.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb) |
      [Open in Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb)
   </small>
