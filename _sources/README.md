@@ -1,6 +1,6 @@
 # Data Visualization Curriculum
 
-A data visualization curriculum of interactive notebooks, using [Vega-Lite](https://vega.github.io/vega-lite/) and [Altair](https://altair-viz.github.io/). This repository contains a series of Python-based Jupyter notebooks. The notebooks are viewable online in a [Jupyter book](https://uwdata.github.io/visualization-curriculum/intro.html), runnable locally or online on [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum) or [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum). A corresponding set of JavaScript notebooks are available online on [Observable](https://observablehq.com/@uwdata/data-visualization-curriculum).
+A data visualization curriculum of interactive notebooks, using [Vega-Lite](https://vega.github.io/vega-lite/) and [Altair](https://altair-viz.github.io/). This repository contains a series of Python-based Jupyter notebooks. The notebooks are online in a [Jupyter book](https://uwdata.github.io/visualization-curriculum/intro.html), runnable locally or online on [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum) or [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum). A corresponding set of **JavaScript** notebooks are available online on [Observable](https://observablehq.com/@uwdata/data-visualization-curriculum).
 
 ## Curriculum
 
@@ -9,71 +9,64 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 1. Introduction to Vega-Lite / Altair<br/>
    <small>
      [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_introduction.html) |
-     Python Notebook: 
-     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb),
-     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb),
+     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
+     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
-     Javascript Notebook on [Observable](https://observablehq.com/@uwdata/introduction-to-vega-lite)
+     [Observable](https://observablehq.com/@uwdata/introduction-to-vega-lite)
    </small>
 
 2. Data Types, Graphical Marks, and Visual Encoding Channels<br/>
    <small>
      [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_marks_encoding.html) |
-     Python Notebook: 
-     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb),
-     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb),
+     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
+     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
-     Javascript Notebook on [Observable](https://observablehq.com/@uwdata/data-types-graphical-marks-and-visual-encoding-channels)
+     [Observable](https://observablehq.com/@uwdata/data-types-graphical-marks-and-visual-encoding-channels)
    </small>
 
 3. Data Transformation<br/>
    <small>
      [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_data_transformation.html) |
-     Python Notebook: 
-     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb),
-     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb),
+     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
+     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
-     Javascript Notebook on [Observable](https://observablehq.com/@uwdata/data-transformation)
+     [Observable](https://observablehq.com/@uwdata/data-transformation)
    </small>
 
 4. Scales, Axes, and Legends<br/>
    <small>
      [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_scales_axes_legends.html) |
-     Python Notebook: 
-     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb),
-     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb),
+     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
+     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
-     Javascript Notebook on [Observable](https://observablehq.com/@uwdata/scales-axes-and-legends)
+     [Observable](https://observablehq.com/@uwdata/scales-axes-and-legends)
    </small>
 
 5. Multi-View Composition<br/>
    <small>
      [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_view_composition.html) |
-     Python Notebook: 
-     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb),
-     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb),
+     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
+     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
-     Javascript Notebook on [Observable](https://observablehq.com/@uwdata/multi-view-composition)
+     [Observable](https://observablehq.com/@uwdata/multi-view-composition)
    </small>
 
 6. Interaction<br/>
    <small>
      [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_interaction.html) |
-     Python Notebook: 
-     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb),
-     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb),
+     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
+     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
-     Javascript Notebook on [Observable](https://observablehq.com/@uwdata/interaction)
+     [Observable](https://observablehq.com/@uwdata/interaction)
    </small>
 
 7. Cartographic Visualization<br/>
    <small>
      [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_cartographic.html) |
-     Python Notebook: 
-     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb),
-     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb),
+     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
+     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
-     Javascript Notebook on [Observable](https://observablehq.com/@uwdata/cartographic-visualization)
+     [Observable](https://observablehq.com/@uwdata/cartographic-visualization)
    </small>
 
 ### Support
@@ -81,9 +74,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
 - Altair Debugging Guide<br/>
   <small>
      [Jupyter Book](https://uwdata.github.io/visualization-curriculum/altair_debugging.html) |
-     Python Notebook: 
-     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb),
-     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb),
+     [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb) |
+     [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb)
   </small>
 
@@ -94,8 +86,8 @@ The visualization curriculum can be used either online or on your local computer
 ### Online
 
 - [Jupyter Book](https://uwdata.github.io/visualization-curriculum/) to read Python notebooks online.
-- Run the Python notebooks online on [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/) or [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/)
-- Run the JavaScript notebooks online using [Observable](https://observablehq.com/collection/@uwdata/visualization-curriculum)
+- Run the **Python** notebooks online on [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/) or [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/)
+- Run the **JavaScript** notebooks online using [Observable](https://observablehq.com/collection/@uwdata/visualization-curriculum)
 
 ### Local Installation
 
