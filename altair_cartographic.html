@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>7. Cartographic Visualization &#8212; Visualization Curriculum</title>
     
-  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -44,7 +41,7 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -56,14 +53,14 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Altair Debugging Guide" href="altair_debugging.html" />
     <link rel="prev" title="6. Interaction" href="altair_interaction.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -72,32 +69,32 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
-  
-  <img src="_static/altair-hist.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Visualization Curriculum</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/altair-hist.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Visualization Curriculum</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
    Introduction
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Curriculum
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="altair_introduction.html">
    1. Introduction to Altair
@@ -134,12 +131,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Support
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="altair_debugging.html">
    Altair Debugging Guide
@@ -147,6 +144,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -212,12 +210,12 @@
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -248,12 +246,11 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geographic-data-geojson-and-topojson">
    7.1. Geographic Data: GeoJSON and TopoJSON
@@ -303,8 +300,7 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -440,12 +436,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-b38267ef58d4407c83b799dab9ddcf1e"></div>
+<div id="altair-viz-3a5399e932704a2d8ea676b804c67b6b"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b38267ef58d4407c83b799dab9ddcf1e") {
-      outputDiv = document.getElementById("altair-viz-b38267ef58d4407c83b799dab9ddcf1e");
+    if (outputDiv.id !== "altair-viz-3a5399e932704a2d8ea676b804c67b6b") {
+      outputDiv = document.getElementById("altair-viz-3a5399e932704a2d8ea676b804c67b6b");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -503,12 +499,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-e9690e18ae2441178956ce6d1f295e7e"></div>
+<div id="altair-viz-436657cdda60444389cb39895ae2f4f5"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e9690e18ae2441178956ce6d1f295e7e") {
-      outputDiv = document.getElementById("altair-viz-e9690e18ae2441178956ce6d1f295e7e");
+    if (outputDiv.id !== "altair-viz-436657cdda60444389cb39895ae2f4f5") {
+      outputDiv = document.getElementById("altair-viz-436657cdda60444389cb39895ae2f4f5");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -566,12 +562,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-5c17bb5f6f0d499ea3bc30332de5a670"></div>
+<div id="altair-viz-dbed513cab3d42088337450e35f4fb2c"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5c17bb5f6f0d499ea3bc30332de5a670") {
-      outputDiv = document.getElementById("altair-viz-5c17bb5f6f0d499ea3bc30332de5a670");
+    if (outputDiv.id !== "altair-viz-dbed513cab3d42088337450e35f4fb2c") {
+      outputDiv = document.getElementById("altair-viz-dbed513cab3d42088337450e35f4fb2c");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -657,12 +653,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-e8f0f7c0ea134ad496544782f2f9b971"></div>
+<div id="altair-viz-ea156fa3076d4eadb0697143895910a8"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e8f0f7c0ea134ad496544782f2f9b971") {
-      outputDiv = document.getElementById("altair-viz-e8f0f7c0ea134ad496544782f2f9b971");
+    if (outputDiv.id !== "altair-viz-ea156fa3076d4eadb0697143895910a8") {
+      outputDiv = document.getElementById("altair-viz-ea156fa3076d4eadb0697143895910a8");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -747,12 +743,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-5d73a232e6da4b56983bfb9f4e5807b9"></div>
+<div id="altair-viz-042669b045574f009b4f2fd953f2e196"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5d73a232e6da4b56983bfb9f4e5807b9") {
-      outputDiv = document.getElementById("altair-viz-5d73a232e6da4b56983bfb9f4e5807b9");
+    if (outputDiv.id !== "altair-viz-042669b045574f009b4f2fd953f2e196") {
+      outputDiv = document.getElementById("altair-viz-042669b045574f009b4f2fd953f2e196");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -823,12 +819,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-89ce1a4718ad412b9bb77a61cde5e486"></div>
+<div id="altair-viz-5dc8a8a878de4afc984511bb1bed59dd"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-89ce1a4718ad412b9bb77a61cde5e486") {
-      outputDiv = document.getElementById("altair-viz-89ce1a4718ad412b9bb77a61cde5e486");
+    if (outputDiv.id !== "altair-viz-5dc8a8a878de4afc984511bb1bed59dd") {
+      outputDiv = document.getElementById("altair-viz-5dc8a8a878de4afc984511bb1bed59dd");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -902,12 +898,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-65fecb884d064a9fb6255b6975ffb131"></div>
+<div id="altair-viz-0ac3dc7ef56841e382199212beff99dd"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-65fecb884d064a9fb6255b6975ffb131") {
-      outputDiv = document.getElementById("altair-viz-65fecb884d064a9fb6255b6975ffb131");
+    if (outputDiv.id !== "altair-viz-0ac3dc7ef56841e382199212beff99dd") {
+      outputDiv = document.getElementById("altair-viz-0ac3dc7ef56841e382199212beff99dd");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1026,12 +1022,12 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-08f03762614f49a188df4d6965774e64"></div>
+<div id="altair-viz-b5ce270d97b64b289dcfc615516bbf61"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-08f03762614f49a188df4d6965774e64") {
-      outputDiv = document.getElementById("altair-viz-08f03762614f49a188df4d6965774e64");
+    if (outputDiv.id !== "altair-viz-b5ce270d97b64b289dcfc615516bbf61") {
+      outputDiv = document.getElementById("altair-viz-b5ce270d97b64b289dcfc615516bbf61");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1116,12 +1112,12 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-6a38944cf7f549aaa88ebdf273516408"></div>
+<div id="altair-viz-1f855955192d45bc90e91903dd5bdb73"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6a38944cf7f549aaa88ebdf273516408") {
-      outputDiv = document.getElementById("altair-viz-6a38944cf7f549aaa88ebdf273516408");
+    if (outputDiv.id !== "altair-viz-1f855955192d45bc90e91903dd5bdb73") {
+      outputDiv = document.getElementById("altair-viz-1f855955192d45bc90e91903dd5bdb73");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1237,12 +1233,12 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-d0be2bc605624c518b2c98dab3ef81a8"></div>
+<div id="altair-viz-8cfebcb6c68443b0a5e888ab6bd2d116"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d0be2bc605624c518b2c98dab3ef81a8") {
-      outputDiv = document.getElementById("altair-viz-d0be2bc605624c518b2c98dab3ef81a8");
+    if (outputDiv.id !== "altair-viz-8cfebcb6c68443b0a5e888ab6bd2d116") {
+      outputDiv = document.getElementById("altair-viz-8cfebcb6c68443b0a5e888ab6bd2d116");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1331,12 +1327,12 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-83e18786c0a841a8b1fa7769856f0126"></div>
+<div id="altair-viz-f7b4784172ac4b17bc44e15e215b033c"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-83e18786c0a841a8b1fa7769856f0126") {
-      outputDiv = document.getElementById("altair-viz-83e18786c0a841a8b1fa7769856f0126");
+    if (outputDiv.id !== "altair-viz-f7b4784172ac4b17bc44e15e215b033c") {
+      outputDiv = document.getElementById("altair-viz-f7b4784172ac4b17bc44e15e215b033c");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1406,12 +1402,12 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-b0e6ecc7194646c68fb6f046dc947c1e"></div>
+<div id="altair-viz-581041d8115f45e4a1ab22c3bcee4f9b"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b0e6ecc7194646c68fb6f046dc947c1e") {
-      outputDiv = document.getElementById("altair-viz-b0e6ecc7194646c68fb6f046dc947c1e");
+    if (outputDiv.id !== "altair-viz-581041d8115f45e4a1ab22c3bcee4f9b") {
+      outputDiv = document.getElementById("altair-viz-581041d8115f45e4a1ab22c3bcee4f9b");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1491,12 +1487,12 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-d235aa4b3444444dbe8d1faae4c5c130"></div>
+<div id="altair-viz-d01cc28d2e0e4befbc9f313608dce41b"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d235aa4b3444444dbe8d1faae4c5c130") {
-      outputDiv = document.getElementById("altair-viz-d235aa4b3444444dbe8d1faae4c5c130");
+    if (outputDiv.id !== "altair-viz-d01cc28d2e0e4befbc9f313608dce41b") {
+      outputDiv = document.getElementById("altair-viz-d01cc28d2e0e4befbc9f313608dce41b");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1564,12 +1560,12 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-b42266fdebd74ecfaab0caebb42f6c27"></div>
+<div id="altair-viz-4bf7e2df3f5f4d3c9eefb594af479292"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b42266fdebd74ecfaab0caebb42f6c27") {
-      outputDiv = document.getElementById("altair-viz-b42266fdebd74ecfaab0caebb42f6c27");
+    if (outputDiv.id !== "altair-viz-4bf7e2df3f5f4d3c9eefb594af479292") {
+      outputDiv = document.getElementById("altair-viz-4bf7e2df3f5f4d3c9eefb594af479292");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1638,12 +1634,12 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-368abc8811df4f62b6903b1ea16f4fb6"></div>
+<div id="altair-viz-6afcd0f6d42246c1991b80cc9dc57907"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-368abc8811df4f62b6903b1ea16f4fb6") {
-      outputDiv = document.getElementById("altair-viz-368abc8811df4f62b6903b1ea16f4fb6");
+    if (outputDiv.id !== "altair-viz-6afcd0f6d42246c1991b80cc9dc57907") {
+      outputDiv = document.getElementById("altair-viz-6afcd0f6d42246c1991b80cc9dc57907");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1762,11 +1758,9 @@ For our base map, we’ll use a TopoJSON file for the United States at 10m resol
 
       </div>
     </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>
