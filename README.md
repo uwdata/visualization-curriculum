@@ -1,6 +1,6 @@
 # Data Visualization Curriculum
 
-A data visualization curriculum of interactive notebooks, using [Vega-Lite](https://vega.github.io/vega-lite/) and [Altair](https://altair-viz.github.io/). This repository contains a series of **Python**-based Jupyter notebooks. The notebooks are online in a [Jupyter book](https://uwdata.github.io/visualization-curriculum/intro.html), runnable locally or online on [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum) or [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum) or [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb). A corresponding set of **JavaScript** notebooks are available online on [Observable](https://observablehq.com/@uwdata/data-visualization-curriculum).
+A data visualization curriculum of interactive notebooks, using [Vega-Lite](https://vega.github.io/vega-lite/) and [Altair](https://altair-viz.github.io/). This repository contains a series of **Python**-based Jupyter notebooks. The notebooks are online in a [Jupyter book](https://uwdata.github.io/visualization-curriculum/intro.html), runnable locally or online on [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum), [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum), or [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb). A corresponding set of **JavaScript** notebooks are available online on [Observable](https://observablehq.com/@uwdata/data-visualization-curriculum).
 
 ## Curriculum
 
@@ -94,7 +94,7 @@ The visualization curriculum can be used either online or on your local computer
 ### Online
 
 - [Jupyter Book](https://uwdata.github.io/visualization-curriculum/) to read Python notebooks online.
-- Run the **Python** notebooks online on [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/) or [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/) or [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb)
+- Run the **Python** notebooks online on [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/), [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/), or [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb)
 - Run the **JavaScript** notebooks online using [Observable](https://observablehq.com/collection/@uwdata/visualization-curriculum)
 
 ### Local Installation
