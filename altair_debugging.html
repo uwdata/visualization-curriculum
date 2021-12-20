@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Altair Debugging Guide &#8212; Visualization Curriculum</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,19 +31,19 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -53,7 +53,10 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="7. Cartographic Visualization" href="altair_cartographic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -70,6 +73,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/altair-hist.png" class="logo" alt="logo">
       
       
@@ -79,7 +86,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -88,7 +95,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Curriculum
  </span>
@@ -130,7 +137,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Support
  </span>
@@ -248,7 +255,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installation">
@@ -322,7 +329,7 @@
         
               <div>
                 
-  <div class="section" id="altair-debugging-guide">
+  <div class="tex2jax_ignore mathjax_ignore section" id="altair-debugging-guide">
 <h1>Altair Debugging Guide<a class="headerlink" href="#altair-debugging-guide" title="Permalink to this headline">¶</a></h1>
 <p>In this notebook we show you common debugging techniques that you can use if you run into issues with Altair.</p>
 <p>You can jump to the following sections:</p>
@@ -356,23 +363,25 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: altair in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (4.1.0)
-Requirement already satisfied: vega_datasets in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (0.9.0)
-Requirement already satisfied: jsonschema in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from altair) (3.2.0)
-Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from altair) (1.20.3)
-Requirement already satisfied: toolz in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from altair) (0.11.1)
-Requirement already satisfied: pandas&gt;=0.18 in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from altair) (1.2.4)
-Requirement already satisfied: entrypoints in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from altair) (0.3)
-Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from altair) (2.11.3)
-Requirement already satisfied: pytz&gt;=2017.3 in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from pandas&gt;=0.18-&gt;altair) (2021.1)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from pandas&gt;=0.18-&gt;altair) (2.8.1)
-Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.18-&gt;altair) (1.16.0)
-Requirement already satisfied: MarkupSafe&gt;=0.23 in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from jinja2-&gt;altair) (1.1.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: altair in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (4.1.0)
+Requirement already satisfied: vega_datasets in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (0.9.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from jsonschema-&gt;altair) (56.0.0)
-Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from jsonschema-&gt;altair) (0.17.3)
-Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages (from jsonschema-&gt;altair) (20.3.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: entrypoints in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from altair) (0.3)
+Requirement already satisfied: toolz in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from altair) (0.11.2)
+Requirement already satisfied: jsonschema in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from altair) (3.2.0)
+Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from altair) (3.0.3)
+Requirement already satisfied: pandas&gt;=0.18 in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from altair) (1.3.5)
+Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from altair) (1.21.5)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from pandas&gt;=0.18-&gt;altair) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from pandas&gt;=0.18-&gt;altair) (2021.3)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from jinja2-&gt;altair) (2.0.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from jsonschema-&gt;altair) (58.1.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from jsonschema-&gt;altair) (0.18.0)
+Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from jsonschema-&gt;altair) (1.16.0)
+Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages (from jsonschema-&gt;altair) (21.2.0)
 </pre></div>
 </div>
 </div>
@@ -437,12 +446,12 @@ Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-d29b13c42a3e4e6da2111d6a1ad4dbb8"></div>
+<div id="altair-viz-dd7960d242684c30a2c0dd75fa441e8d"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d29b13c42a3e4e6da2111d6a1ad4dbb8") {
-      outputDiv = document.getElementById("altair-viz-d29b13c42a3e4e6da2111d6a1ad4dbb8");
+    if (outputDiv.id !== "altair-viz-dd7960d242684c30a2c0dd75fa441e8d") {
+      outputDiv = document.getElementById("altair-viz-dd7960d242684c30a2c0dd75fa441e8d");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -533,12 +542,12 @@ Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-c519a991eccf4b33a720cd168696ac53"></div>
+<div id="altair-viz-d183b5f60ceb49bea6bf6f5e9672fdcd"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-c519a991eccf4b33a720cd168696ac53") {
-      outputDiv = document.getElementById("altair-viz-c519a991eccf4b33a720cd168696ac53");
+    if (outputDiv.id !== "altair-viz-d183b5f60ceb49bea6bf6f5e9672fdcd") {
+      outputDiv = document.getElementById("altair-viz-d183b5f60ceb49bea6bf6f5e9672fdcd");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -653,14 +662,14 @@ Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">SchemaValidationError</span><span class="g g-Whitespace">                     </span>Traceback (most recent call last)
-<span class="nn">/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/altair/vegalite/v4/api.py</span> in <span class="ni">to_dict</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages/altair/vegalite/v4/api.py</span> in <span class="ni">to_dict</span><span class="nt">(self, *args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">380</span>         <span class="k">if</span> <span class="n">dct</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">381</span>             <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;validate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;deep&quot;</span>
 <span class="ne">--&gt; </span><span class="mi">382</span>             <span class="n">dct</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">TopLevelMixin</span><span class="p">,</span> <span class="n">copy</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">383</span> 
 <span class="g g-Whitespace">    </span><span class="mi">384</span>         <span class="c1"># TODO: following entries are added after validation. Should they be validated?</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/altair/utils/schemapi.py</span> in <span class="ni">to_dict</span><span class="nt">(self, validate, ignore, context)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.10.1/x64/lib/python3.10/site-packages/altair/utils/schemapi.py</span> in <span class="ni">to_dict</span><span class="nt">(self, validate, ignore, context)</span>
 <span class="g g-Whitespace">    </span><span class="mi">337</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">338</span>             <span class="k">except</span> <span class="n">jsonschema</span><span class="o">.</span><span class="n">ValidationError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">339</span>                 <span class="k">raise</span> <span class="n">SchemaValidationError</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
@@ -690,7 +699,7 @@ Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-9-fc84db126677&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_1734/169054387.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">))</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
                    <span class="o">^</span>
 <span class="ne">SyntaxError</span>: unmatched &#39;)&#39;
@@ -717,12 +726,12 @@ Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-b84b3bd433954b6787dd5ea046291afd"></div>
+<div id="altair-viz-2c96e9402de4444ba76a9174aa030087"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b84b3bd433954b6787dd5ea046291afd") {
-      outputDiv = document.getElementById("altair-viz-b84b3bd433954b6787dd5ea046291afd");
+    if (outputDiv.id !== "altair-viz-2c96e9402de4444ba76a9174aa030087") {
+      outputDiv = document.getElementById("altair-viz-2c96e9402de4444ba76a9174aa030087");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -803,21 +812,26 @@ Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="altair_cartographic.html" title="previous page"><span class="section-number">7. </span>Cartographic Visualization</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="altair_cartographic.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>Cartographic Visualization</p>
         </div>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
           By Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>
@@ -827,8 +841,7 @@ Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
