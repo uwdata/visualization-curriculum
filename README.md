@@ -101,7 +101,7 @@ The visualization curriculum can be used either online or on your local computer
 
 1. [Install Altair and a notebook environment](https://altair-viz.github.io/getting_started/installation.html). The most recent versions of these notebooks use _Altair version 6_.
 2. Download the notebooks from the [releases page](https://github.com/uwdata/visualization-curriculum/releases). Typically you will want to use the most recent release.
-3. Open the notebooks in your local notebook environment. For example, if you have JupyterLab installed (v1.0 or higher is required), run `jupyter lab` within the directory containing the notebooks.
+3. Open the notebooks in your local notebook environment. For example, if you have JupyterLab installed (v1.0 or higher is required), run `jupyter lab` within the directory containing the notebooks. With [uv](https://docs.astral.sh/uv/guides/install-python/), you can run `uv run jupyter lab` (it automatically installs the dependencies).
 
 Depending on your programming environment (and whether or not you have a live internet connection), you may want to specify a particular [renderer](https://altair-viz.github.io/user_guide/display_frontends.html) for Altair.
 
