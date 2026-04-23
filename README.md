@@ -13,7 +13,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
      [Observable](https://observablehq.com/@uwdata/introduction-to-vega-lite) |
-     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb)
+     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_introduction.ipynb) |
+	 [marimo](https://molab.marimo.io/github/marimo-team/learn/blob/main/altair/01_introduction.py)
    </small>
 
 2. Data Types, Graphical Marks, and Visual Encoding Channels<br/>
@@ -23,7 +24,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
      [Observable](https://observablehq.com/@uwdata/data-types-graphical-marks-and-visual-encoding-channels) |
-     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb)
+     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_marks_encoding.ipynb) |
+	 [marimo](https://molab.marimo.io/github/marimo-team/learn/blob/main/altair/02_marks_encoding.py)
    </small>
 
 3. Data Transformation<br/>
@@ -33,7 +35,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
      [Observable](https://observablehq.com/@uwdata/data-transformation) |
-     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb)
+     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_data_transformation.ipynb) |
+	 [marimo](https://molab.marimo.io/github/marimo-team/learn/blob/main/altair/03_data_transformation.py)
    </small>
 
 4. Scales, Axes, and Legends<br/>
@@ -43,7 +46,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
      [Observable](https://observablehq.com/@uwdata/scales-axes-and-legends) |
-     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb)
+     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_scales_axes_legends.ipynb) |
+	 [marimo](https://molab.marimo.io/github/marimo-team/learn/blob/main/altair/04_scales_axes_legends.py)
    </small>
 
 5. Multi-View Composition<br/>
@@ -53,7 +57,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
      [Observable](https://observablehq.com/@uwdata/multi-view-composition) |
-     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb)
+     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_view_composition.ipynb) |
+	 [marimo](https://molab.marimo.io/github/marimo-team/learn/blob/main/altair/05_view_composition.py)
    </small>
 
 6. Interaction<br/>
@@ -63,7 +68,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
      [Observable](https://observablehq.com/@uwdata/interaction) |
-     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb)
+     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) |
+	 [marimo](https://molab.marimo.io/github/marimo-team/learn/blob/main/altair/06_interaction.py)
    </small>
 
 7. Cartographic Visualization<br/>
@@ -73,7 +79,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
      [Observable](https://observablehq.com/@uwdata/cartographic-visualization) |
-     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb)
+     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_cartographic.ipynb) |
+	 [marimo](https://molab.marimo.io/github/marimo-team/learn/blob/main/altair/07_cartographic.py)
    </small>
 
 ### Support
@@ -84,7 +91,8 @@ A data visualization curriculum of interactive notebooks, using [Vega-Lite](http
      [Jupyter](https://github.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb) |
      [Colab](https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb) |
      [Nextjournal](https://github.nextjournal.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb) |
-     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb)
+     [Deepnote](https://deepnote.com/launch?url=https://github.com/uwdata/visualization-curriculum/blob/master/altair_debugging.ipynb) |
+	 [marimo](https://molab.marimo.io/github/marimo-team/learn/blob/main/altair/08_debugging.py)
   </small>
 
 ## Getting Started
