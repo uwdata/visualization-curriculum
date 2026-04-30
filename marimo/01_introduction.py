@@ -249,7 +249,7 @@ def _(alt, df):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    The two styles of specifying encodings can be interleaved: `x='precip', alt.Y('city')` is also a valid input to the `encode` function.
+    The two styles of specifying encodings can be interleaved: `x='precip', y=alt.Y('city')` is also a valid input to the `encode` function.
 
     In the examples above, the data type for each field is inferred automatically based on its type within the Pandas data frame. We can also explicitly indicate the data type to Altair by annotating the field name:
 
