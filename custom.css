@@ -1,0 +1,13 @@
+/* Add spacing to Vega-Lite radio button labels and select elements */
+.vega-bindings .vega-bind-name {
+  margin-right: 0.5em;
+}
+
+.vega-bindings label {
+  margin-right: 0.75em;
+}
+
+.vega-bindings select,
+.vega-bindings input[type="range"] {
+  color: black;
+}

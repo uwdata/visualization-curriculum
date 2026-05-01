@@ -1,11 +1,10 @@
 [project]
 name = "altair-tutorial"
 version = "0.1.0"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 dependencies = [
     "altair>=6.0.0",
-    "ghp-import",
-    "jupyter-book<1",
+    "jupyter-book>=2",
     "jupyterlab>=4.5.6",
     "pandas>=3.0.2"
 ]

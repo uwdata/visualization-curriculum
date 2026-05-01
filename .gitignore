@@ -1,3 +1,6 @@
 .ipynb_checkpoints
 __marimo__
 *~
+
+# MyST build outputs
+_build

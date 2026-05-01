@@ -115,6 +115,29 @@ The visualization curriculum can be used either online or on your local computer
 
 Depending on your programming environment (and whether or not you have a live internet connection), you may want to specify a particular [renderer](https://altair-viz.github.io/user_guide/display_frontends.html) for Altair.
 
+### Publishing the Jupyter Book
+
+The book is built with [Jupyter Book 2](https://jupyterbook.org/) and published to GitHub Pages automatically on every push to `main` via GitHub Actions.
+
+To preview the book locally:
+
+```bash
+uv run jupyter-book start
+```
+
+To publish manually:
+
+```bash
+uv run jupyter-book build --html
+npx -y gh-pages -n -d _build/html
+```
+
+To execute notebooks during the build, add the `--execute` flag:
+
+```bash
+uv run jupyter-book build --execute --html
+```
+
 ## Credits
 
 Developed at the University of Washington by Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft. Thanks to the [UW Interactive Data Lab](https://idl.cs.washington.edu/) and Arvind Satyanarayan for their valuable input and feedback! Thanks also to the students of [UW CSE512 Spring 2019](https://courses.cs.washington.edu/courses/cse512/19sp/), the first group to use these notebooks within an integrated course curriculum.
