@@ -8,6 +8,10 @@ logo: altair-hist.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
+exclude_patterns:
+  - .venv
+  - _build
+
 execute:
   execute_notebooks: force
   allow_errors: true
