@@ -20,7 +20,7 @@ const messages = {
   },
   'fr' : {
     'copy': 'Copier',
-    'copy_to_clipboard': 'Copié dans le presse-papier',
+    'copy_to_clipboard': 'Copier dans le presse-papier',
     'copy_success': 'Copié !',
     'copy_failure': 'Échec de la copie',
   },
@@ -35,6 +35,12 @@ const messages = {
     'copy_to_clipboard': '复制到剪贴板',
     'copy_success': '复制成功!',
     'copy_failure': '复制失败',
+  },
+  'it' : {
+    'copy': 'Copiare',
+    'copy_to_clipboard': 'Copiato negli appunti',
+    'copy_success': 'Copiato!',
+    'copy_failure': 'Errore durante la copia',
   }
 }
 
@@ -49,7 +55,25 @@ if (doc_url_root == '#') {
     doc_url_root = '';
 }
 
-const path_static = `${doc_url_root}_static/`;
+/**
+ * SVG files for our copy buttons
+ */
+let iconCheck = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="44" height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#22863a" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>${messages[locale]['copy_success']}</title>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>`
+
+// If the user specified their own SVG use that, otherwise use the default
+let iconCopy = ``;
+if (!iconCopy) {
+  iconCopy = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>${messages[locale]['copy_to_clipboard']}</title>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="8" y="8" width="12" height="12" rx="2" />
+  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+</svg>`
+}
 
 /**
  * Set up copy/paste for code blocks
@@ -78,19 +102,25 @@ const clearSelection = () => {
   }
 }
 
-// Changes tooltip text for two seconds, then changes it back
+// Changes tooltip text for a moment, then changes it back
+// We want the timeout of our `success` class to be a bit shorter than the
+// tooltip and icon change, so that we can hide the icon before changing back.
+var timeoutIcon = 2000;
+var timeoutSuccessClass = 1500;
+
 const temporarilyChangeTooltip = (el, oldText, newText) => {
   el.setAttribute('data-tooltip', newText)
   el.classList.add('success')
-  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
-  setTimeout(() => el.classList.remove('success'), 2000)
+  // Remove success a little bit sooner than we change the tooltip
+  // So that we can use CSS to hide the copybutton first
+  setTimeout(() => el.classList.remove('success'), timeoutSuccessClass)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), timeoutIcon)
 }
 
 // Changes the copy button icon for two seconds, then changes it back
 const temporarilyChangeIcon = (el) => {
-  img = el.querySelector("img");
-  img.setAttribute('src', `${path_static}check-solid.svg`)
-  setTimeout(() => img.setAttribute('src', `${path_static}copy-button.svg`), 2000)
+  el.innerHTML = iconCheck;
+  setTimeout(() => {el.innerHTML = iconCopy}, timeoutIcon)
 }
 
 const addCopyButtonToCodeCells = () => {
@@ -102,14 +132,15 @@ const addCopyButtonToCodeCells = () => {
   }
 
   // Add copybuttons to all of our code cells
-  const codeCells = document.querySelectorAll('div.highlight pre')
+  const COPYBUTTON_SELECTOR = 'div.highlight pre';
+  const codeCells = document.querySelectorAll(COPYBUTTON_SELECTOR)
   codeCells.forEach((codeCell, index) => {
     const id = codeCellId(index)
     codeCell.setAttribute('id', id)
 
     const clipboardButton = id =>
     `<button class="copybtn o-tooltip--left" data-tooltip="${messages[locale]['copy']}" data-clipboard-target="#${id}">
-      <img src="${path_static}copy-button.svg" alt="${messages[locale]['copy_to_clipboard']}">
+      ${iconCopy}
     </button>`
     codeCell.insertAdjacentHTML('afterend', clipboardButton(id))
   })
@@ -118,10 +149,25 @@ function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
+/**
+ * Removes excluded text from a Node.
+ *
+ * @param {Node} target Node to filter.
+ * @param {string} exclude CSS selector of nodes to exclude.
+ * @returns {DOMString} Text from `target` with text removed.
+ */
+function filterText(target, exclude) {
+    const clone = target.cloneNode(true);  // clone as to not modify the live DOM
+    if (exclude) {
+        // remove excluded nodes
+        clone.querySelectorAll(exclude).forEach(node => node.remove());
+    }
+    return clone.innerText;
+}
+
 // Callback when a copy button is clicked. Will be passed the node that was clicked
 // should then grab the text and replace pieces of text that shouldn't be used in output
 function formatCopyText(textContent, copybuttonPromptText, isRegexp = false, onlyCopyPromptLines = true, removePrompts = true, copyEmptyLines = true, lineContinuationChar = "", hereDocDelim = "") {
-
     var regexp;
     var match;
 
@@ -176,7 +222,12 @@ function formatCopyText(textContent, copybuttonPromptText, isRegexp = false, onl
 
 var copyTargetText = (trigger) => {
   var target = document.querySelector(trigger.attributes['data-clipboard-target'].value);
-  return formatCopyText(target.innerText, '', false, true, true, true, '', '')
+
+  // get filtered text
+  let exclude = '.linenos';
+
+  let text = filterText(target, exclude);
+  return formatCopyText(text, '', false, true, true, true, '', '')
 }
 
   // Initialize with a callback so we can modify the text before copy

@@ -1,347 +1,453 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>6. Interaction &#8212; Visualization Curriculum</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'altair_interaction';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="7. Cartographic Visualization" href="altair_cartographic.html" />
     <link rel="prev" title="5. Multi-View Composition" href="altair_view_composition.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/altair-hist.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Visualization Curriculum</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Curriculum
- </span>
-</p>
+    
+    
+    <img src="_static/altair-hist.png" class="logo__image only-light" alt="Visualization Curriculum - Home"/>
+    <script>document.write(`<img src="_static/altair-hist.png" class="logo__image only-dark" alt="Visualization Curriculum - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Curriculum</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="altair_introduction.html">
-   1. Introduction to Altair
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="altair_marks_encoding.html">
-   2. Data Types, Graphical Marks, and Visual Encoding Channels
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="altair_data_transformation.html">
-   3. Data Transformation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="altair_scales_axes_legends.html">
-   4. Scales, Axes, and Legends
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="altair_view_composition.html">
-   5. Multi-View Composition
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   6. Interaction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="altair_cartographic.html">
-   7. Cartographic Visualization
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="altair_introduction.html">1. Introduction to Altair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="altair_marks_encoding.html">2. Data Types, Graphical Marks, and Visual Encoding Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="altair_data_transformation.html">3. Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="altair_scales_axes_legends.html">4. Scales, Axes, and Legends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="altair_view_composition.html">5. Multi-View Composition</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="altair_cartographic.html">7. Cartographic Visualization</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Support
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Support</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="altair_debugging.html">
-   Altair Debugging Guide
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="altair_debugging.html">Altair Debugging Guide</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/altair_interaction.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/uwdata/visualization-curriculum"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/uwdata/visualization-curriculum/issues/new?title=Issue%20on%20page%20%2Faltair_interaction.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/uwdata/visualization-curriculum/master?urlpath=tree/altair_interaction.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/uwdata/visualization-curriculum" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/uwdata/visualization-curriculum/issues/new?title=Issue%20on%20page%20%2Faltair_interaction.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/altair_interaction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Interaction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#datasets">
-   6.1. Datasets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introducing-selections">
-   6.2. Introducing Selections
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dynamic-queries">
-   6.3. Dynamic Queries
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#binding-selections-to-multiple-inputs">
-     6.3.1. Binding Selections to Multiple Inputs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-visualizations-as-dynamic-queries">
-     6.3.2. Using Visualizations as Dynamic Queries
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#panning-zooming">
-   6.4. Panning &amp; Zooming
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#navigation-overview-detail">
-   6.5. Navigation: Overview + Detail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#details-on-demand">
-   6.6. Details on Demand
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#brushing-linking-revisited">
-   6.7. Brushing &amp; Linking, Revisited
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cross-filtering">
-     6.7.1. Cross-Filtering
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   6.8. Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#appendix-on-the-representation-of-time">
-     6.8.1. Appendix: On The Representation of Time
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">6.1. Datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-selections">6.2. Introducing Selections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-queries">6.3. Dynamic Queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#binding-selections-to-multiple-inputs">6.3.1. Binding Selections to Multiple Inputs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-visualizations-as-dynamic-queries">6.3.2. Using Visualizations as Dynamic Queries</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panning-zooming">6.4. Panning &amp; Zooming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigation-overview-detail">6.5. Navigation: Overview + Detail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-on-demand">6.6. Details on Demand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brushing-linking-revisited">6.7. Brushing &amp; Linking, Revisited</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-filtering">6.7.1. Cross-Filtering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">6.8. Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-on-the-representation-of-time">6.8.1. Appendix: On The Representation of Time</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="interaction">
-<h1><span class="section-number">6. </span>Interaction<a class="headerlink" href="#interaction" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="interaction">
+<h1><span class="section-number">6. </span>Interaction<a class="headerlink" href="#interaction" title="Permalink to this heading">#</a></h1>
 <p><em>“A graphic is not ‘drawn’ once and for all; it is ‘constructed’ and reconstructed until it reveals all the relationships constituted by the interplay of the data. The best graphic operations are those carried out by the decision-maker themself.”</em> — <a class="reference external" href="https://books.google.com/books?id=csqX_xnm4tcC">Jacques Bertin</a></p>
 <p>Visualization provides a powerful means of making sense of data. A single image, however, typically provides answers to, at best, a handful of questions. Through <em>interaction</em> we can transform static images into tools for exploration: highlighting points of interest, zooming in to reveal finer-grained patterns, and linking across multiple views to reason about multi-dimensional relationships.</p>
 <p>At the core of interaction is the notion of a <em>selection</em>: a means of indicating to the computer which elements or regions we are interested in. For example, we might hover the mouse over a point, click multiple marks, or draw a bounding box around a region to highlight subsets of the data for further scrutiny.</p>
 <p>Alongside visual encodings and data transformations, Altair provides a <em>selection</em> abstraction for authoring interactions. These selections encompass three aspects:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Input event handling to select points or regions of interest, such as mouse hover, click, drag, scroll, and touch events.</p></li>
 <li><p>Generalizing from the input to form a selection rule (or <a class="reference external" href="https://en.wikipedia.org/wiki/Predicate_%28mathematical_logic%29"><em>predicate</em></a>) that determines whether or not a given data record lies within the selection.</p></li>
 <li><p>Using the selection predicate to dynamically configure a visualization by driving <em>conditional encodings</em>, <em>filter transforms</em>, or <em>scale domains</em>.</p></li>
@@ -350,14 +456,14 @@
 <p><em>This notebook is part of the <a class="reference external" href="https://github.com/uwdata/visualization-curriculum">data visualization curriculum</a>.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">altair</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">alt</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="datasets">
-<h2><span class="section-number">6.1. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<section id="datasets">
+<h2><span class="section-number">6.1. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">#</a></h2>
 <p>We will visualize a variety of datasets from the <a class="reference external" href="https://github.com/vega/vega-datasets">vega-datasets</a> collection:</p>
 <ul class="simple">
 <li><p>A dataset of <code class="docutils literal notranslate"><span class="pre">cars</span></code> from the 1970s and early 1980s,</p></li>
@@ -377,9 +483,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="introducing-selections">
-<h2><span class="section-number">6.2. </span>Introducing Selections<a class="headerlink" href="#introducing-selections" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="introducing-selections">
+<h2><span class="section-number">6.2. </span>Introducing Selections<a class="headerlink" href="#introducing-selections" title="Permalink to this heading">#</a></h2>
 <p>Let’s start with a basic selection: simply clicking a point to highlight it. Using the <code class="docutils literal notranslate"><span class="pre">cars</span></code> dataset, we’ll start with a scatter plot of horsepower versus miles per gallon, with a color encoding for the number cylinders in the car engine.</p>
 <p>In addition, we’ll create a selection instance by calling <code class="docutils literal notranslate"><span class="pre">alt.selection_single()</span></code>, indicating we want a selection defined over a <em>single value</em>. By default, the selection uses a mouse click to determine the selected value. To register a selection with a chart, we must add it using the <code class="docutils literal notranslate"><span class="pre">.add_selection()</span></code> method.</p>
 <p>Once our selection has been defined, we can use it as a parameter for <em>conditional encodings</em>, which apply a different encoding depending on whether a data record lies in or out of the selection. For example, consider the following code:</p>
@@ -390,9 +496,9 @@
 <p><em>Try clicking different points in the chart below. What happens? (Click the background to clear the selection state and return to an “empty” selection.)</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">();</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span><span class="n">toggle</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
   
-<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span>
     <span class="n">selection</span>
 <span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Horsepower:Q&#39;</span><span class="p">,</span>
@@ -405,29 +511,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-812fd50a6ca04cf990d5c3d3761e1d24"></div>
+<style>
+  #altair-viz-c3db4e94a2ee400a875fcb0813604660.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-c3db4e94a2ee400a875fcb0813604660.vega-embed details,
+  #altair-viz-c3db4e94a2ee400a875fcb0813604660.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-c3db4e94a2ee400a875fcb0813604660"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-812fd50a6ca04cf990d5c3d3761e1d24") {
-      outputDiv = document.getElementById("altair-viz-812fd50a6ca04cf990d5c3d3761e1d24");
+    if (outputDiv.id !== "altair-viz-c3db4e94a2ee400a875fcb0813604660") {
+      outputDiv = document.getElementById("altair-viz-c3db4e94a2ee400a875fcb0813604660");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -442,17 +567,16 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/cars.json"}, "mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector001"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector001"}, "value": 0.1}, "x": {"type": "quantitative", "field": "Horsepower"}, "y": {"type": "quantitative", "field": "Miles_per_Gallon"}}, "selection": {"selector001": {"type": "single"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/cars.json"}, "mark": {"type": "circle"}, "encoding": {"color": {"condition": {"param": "param_95c23f237ca557a9", "field": "Cylinders", "type": "ordinal"}, "value": "grey"}, "opacity": {"condition": {"param": "param_95c23f237ca557a9", "value": 0.8}, "value": 0.1}, "x": {"field": "Horsepower", "type": "quantitative"}, "y": {"field": "Miles_per_Gallon", "type": "quantitative"}}, "params": [{"name": "param_95c23f237ca557a9", "select": {"type": "point", "toggle": false}}], "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>Of course, highlighting individual data points one-at-a-time is not particularly exciting! As we’ll see, however, single value selections provide a useful building block for more powerful interactions. Moreover, single value selections are just one of the three selection types provided by Altair:</p>
@@ -464,8 +588,8 @@
 <p>Let’s compare each of these selection types side-by-side. To keep our code tidy we’ll first define a function (<code class="docutils literal notranslate"><span class="pre">plot</span></code>) that generates a scatter plot specification just like the one above. We can pass a selection to the <code class="docutils literal notranslate"><span class="pre">plot</span></code> function to have it applied to the chart:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">selection</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span><span class="n">selection</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span>
         <span class="n">selection</span>
     <span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
         <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Horsepower:Q&#39;</span><span class="p">,</span>
@@ -486,8 +610,8 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">hconcat</span><span class="p">(</span>
-  <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">())</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Single (Click)&#39;</span><span class="p">),</span>
-  <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">())</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Multi (Shift-Click)&#39;</span><span class="p">),</span>
+  <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span><span class="n">toggle</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Single (Click)&#39;</span><span class="p">),</span>
+  <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">())</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Multi (Shift-Click)&#39;</span><span class="p">),</span>
   <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_interval</span><span class="p">())</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Interval (Drag)&#39;</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
@@ -495,29 +619,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-0eb9895915ba4518b41934cfbf2e16aa"></div>
+<style>
+  #altair-viz-1da177b3e0ea4043ba4fc32d4c7659e0.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-1da177b3e0ea4043ba4fc32d4c7659e0.vega-embed details,
+  #altair-viz-1da177b3e0ea4043ba4fc32d4c7659e0.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-1da177b3e0ea4043ba4fc32d4c7659e0"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-0eb9895915ba4518b41934cfbf2e16aa") {
-      outputDiv = document.getElementById("altair-viz-0eb9895915ba4518b41934cfbf2e16aa");
+    if (outputDiv.id !== "altair-viz-1da177b3e0ea4043ba4fc32d4c7659e0") {
+      outputDiv = document.getElementById("altair-viz-1da177b3e0ea4043ba4fc32d4c7659e0");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -532,17 +675,16 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector002"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector002"}, "value": 0.1}, "x": {"type": "quantitative", "field": "Horsepower"}, "y": {"type": "quantitative", "field": "Miles_per_Gallon"}}, "height": 180, "selection": {"selector002": {"type": "single"}}, "title": "Single (Click)", "width": 240}, {"mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector003"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector003"}, "value": 0.1}, "x": {"type": "quantitative", "field": "Horsepower"}, "y": {"type": "quantitative", "field": "Miles_per_Gallon"}}, "height": 180, "selection": {"selector003": {"type": "multi"}}, "title": "Multi (Shift-Click)", "width": 240}, {"mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector004"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector004"}, "value": 0.1}, "x": {"type": "quantitative", "field": "Horsepower"}, "y": {"type": "quantitative", "field": "Miles_per_Gallon"}}, "height": 180, "selection": {"selector004": {"type": "interval"}}, "title": "Interval (Drag)", "width": 240}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/cars.json"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "hconcat": [{"mark": {"type": "circle"}, "encoding": {"color": {"condition": {"param": "param_95c23f237ca557a9", "field": "Cylinders", "type": "ordinal"}, "value": "grey"}, "opacity": {"condition": {"param": "param_95c23f237ca557a9", "value": 0.8}, "value": 0.1}, "x": {"field": "Horsepower", "type": "quantitative"}, "y": {"field": "Miles_per_Gallon", "type": "quantitative"}}, "height": 180, "name": "view_da7200848a9f6122_0", "title": "Single (Click)", "width": 240}, {"mark": {"type": "circle"}, "encoding": {"color": {"condition": {"param": "param_e4a496766298965a", "field": "Cylinders", "type": "ordinal"}, "value": "grey"}, "opacity": {"condition": {"param": "param_e4a496766298965a", "value": 0.8}, "value": 0.1}, "x": {"field": "Horsepower", "type": "quantitative"}, "y": {"field": "Miles_per_Gallon", "type": "quantitative"}}, "height": 180, "name": "view_f61b6a27616c1001_1", "title": "Multi (Shift-Click)", "width": 240}, {"mark": {"type": "circle"}, "encoding": {"color": {"condition": {"param": "param_54dd647193d9b3b3", "field": "Cylinders", "type": "ordinal"}, "value": "grey"}, "opacity": {"condition": {"param": "param_54dd647193d9b3b3", "value": 0.8}, "value": 0.1}, "x": {"field": "Horsepower", "type": "quantitative"}, "y": {"field": "Miles_per_Gallon", "type": "quantitative"}}, "height": 180, "name": "view_2a3d4633f4a84cde_2", "title": "Interval (Drag)", "width": 240}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/cars.json"}, "params": [{"name": "param_95c23f237ca557a9", "select": {"type": "point", "toggle": false}, "views": ["view_da7200848a9f6122_0"]}, {"name": "param_e4a496766298965a", "select": {"type": "point"}, "views": ["view_f61b6a27616c1001_1"]}, {"name": "param_54dd647193d9b3b3", "select": {"type": "interval"}, "views": ["view_2a3d4633f4a84cde_2"]}], "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>The examples above use default interactions (click, shift-click, drag) for each selection type. We can further customize the interactions by providing input event specifications using <a class="reference external" href="https://vega.github.io/vega/docs/event-streams/">Vega event selector syntax</a>. For example, we can modify our <code class="docutils literal notranslate"><span class="pre">single</span></code> and <code class="docutils literal notranslate"><span class="pre">multi</span></code> charts to trigger upon <code class="docutils literal notranslate"><span class="pre">mouseover</span></code> events instead of <code class="docutils literal notranslate"><span class="pre">click</span></code> events.</p>
@@ -550,37 +692,56 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">hconcat</span><span class="p">(</span>
-  <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;mouseover&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Single (Mouseover)&#39;</span><span class="p">),</span>
-  <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;mouseover&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Multi (Shift-Mouseover)&#39;</span><span class="p">)</span>
+  <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span><span class="n">toggle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;mouseover&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Single (Mouseover)&#39;</span><span class="p">),</span>
+  <span class="n">plot</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;mouseover&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Multi (Shift-Mouseover)&#39;</span><span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-512c5e51b64e4de29d4422cdd85bc76c"></div>
+<style>
+  #altair-viz-d8e7091f39104bd082f958c2c7941211.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-d8e7091f39104bd082f958c2c7941211.vega-embed details,
+  #altair-viz-d8e7091f39104bd082f958c2c7941211.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-d8e7091f39104bd082f958c2c7941211"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-512c5e51b64e4de29d4422cdd85bc76c") {
-      outputDiv = document.getElementById("altair-viz-512c5e51b64e4de29d4422cdd85bc76c");
+    if (outputDiv.id !== "altair-viz-d8e7091f39104bd082f958c2c7941211") {
+      outputDiv = document.getElementById("altair-viz-d8e7091f39104bd082f958c2c7941211");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -595,23 +756,22 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector005"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector005"}, "value": 0.1}, "x": {"type": "quantitative", "field": "Horsepower"}, "y": {"type": "quantitative", "field": "Miles_per_Gallon"}}, "height": 180, "selection": {"selector005": {"type": "single", "on": "mouseover"}}, "title": "Single (Mouseover)", "width": 240}, {"mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector006"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector006"}, "value": 0.1}, "x": {"type": "quantitative", "field": "Horsepower"}, "y": {"type": "quantitative", "field": "Miles_per_Gallon"}}, "height": 180, "selection": {"selector006": {"type": "multi", "on": "mouseover"}}, "title": "Multi (Shift-Mouseover)", "width": 240}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/cars.json"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "hconcat": [{"mark": {"type": "circle"}, "encoding": {"color": {"condition": {"param": "param_211f05f0997ef6af", "field": "Cylinders", "type": "ordinal"}, "value": "grey"}, "opacity": {"condition": {"param": "param_211f05f0997ef6af", "value": 0.8}, "value": 0.1}, "x": {"field": "Horsepower", "type": "quantitative"}, "y": {"field": "Miles_per_Gallon", "type": "quantitative"}}, "height": 180, "name": "view_355408ea546c7065_0", "title": "Single (Mouseover)", "width": 240}, {"mark": {"type": "circle"}, "encoding": {"color": {"condition": {"param": "param_8e493a008513abe8", "field": "Cylinders", "type": "ordinal"}, "value": "grey"}, "opacity": {"condition": {"param": "param_8e493a008513abe8", "value": 0.8}, "value": 0.1}, "x": {"field": "Horsepower", "type": "quantitative"}, "y": {"field": "Miles_per_Gallon", "type": "quantitative"}}, "height": 180, "name": "view_3c4ef4d279869a8d_1", "title": "Multi (Shift-Mouseover)", "width": 240}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/cars.json"}, "params": [{"name": "param_211f05f0997ef6af", "select": {"type": "point", "on": "mouseover", "toggle": false}, "views": ["view_355408ea546c7065_0"]}, {"name": "param_8e493a008513abe8", "select": {"type": "point", "on": "mouseover"}, "views": ["view_3c4ef4d279869a8d_1"]}], "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>Now that we’ve covered the basics of Altair selections, let’s take a tour through the various interaction techniques they enable!</p>
-</div>
-<div class="section" id="dynamic-queries">
-<h2><span class="section-number">6.3. </span>Dynamic Queries<a class="headerlink" href="#dynamic-queries" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="dynamic-queries">
+<h2><span class="section-number">6.3. </span>Dynamic Queries<a class="headerlink" href="#dynamic-queries" title="Permalink to this heading">#</a></h2>
 <p><em>Dynamic queries</em> enables rapid, reversible exploration of data to isolate patterns of interest. As defined by <a class="reference external" href="https://www.cs.umd.edu/~ben/papers/Ahlberg1992Dynamic.pdf">Ahlberg, Williamson, &amp; Shneiderman</a>, a dynamic query:</p>
 <ul class="simple">
 <li><p>represents a query graphically,</p></li>
@@ -627,7 +787,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span> <span class="c1"># load movies data</span>
 <span class="n">genres</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Major_Genre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="c1"># get unique field values</span>
-<span class="n">genres</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="n">genres</span><span class="p">))</span> <span class="c1"># filter out None values</span>
+<span class="n">genres</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">,</span> <span class="n">genres</span><span class="p">))</span>  <span class="c1"># filter out None/NaN values</span>
 <span class="n">genres</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># sort alphabetically</span>
 </pre></div>
 </div>
@@ -645,14 +805,14 @@
 <p><em>Use the dynamic query menu below to explore the data. How do ratings vary by genre? How would you revise the code to filter <code class="docutils literal notranslate"><span class="pre">MPAA_Rating</span></code> (G, PG, PG-13, etc.) instead of <code class="docutils literal notranslate"><span class="pre">Major_Genre</span></code>?</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selectGenre</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selectGenre</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Select&#39;</span><span class="p">,</span> <span class="c1"># name the selection &#39;Select&#39;</span>
     <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Major_Genre&#39;</span><span class="p">],</span> <span class="c1"># limit selection to the Major_Genre field</span>
-    <span class="n">init</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Major_Genre&#39;</span><span class="p">:</span> <span class="n">genres</span><span class="p">[</span><span class="mi">0</span><span class="p">]},</span> <span class="c1"># use first genre entry as initial value</span>
+    <span class="n">value</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;Major_Genre&#39;</span><span class="p">:</span> <span class="n">genres</span><span class="p">[</span><span class="mi">0</span><span class="p">]}],</span> <span class="c1"># use first genre entry as initial value</span>
     <span class="n">bind</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">binding_select</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">genres</span><span class="p">)</span> <span class="c1"># bind to a menu of unique genre values</span>
 <span class="p">)</span>
 
-<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span>
     <span class="n">selectGenre</span>
 <span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Rotten_Tomatoes_Rating:Q&#39;</span><span class="p">,</span>
@@ -665,29 +825,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-fd70e4ff08b7419886f6f7d0582953b2"></div>
+<style>
+  #altair-viz-01be6ff9868e4844a06f84fdb51d13e6.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-01be6ff9868e4844a06f84fdb51d13e6.vega-embed details,
+  #altair-viz-01be6ff9868e4844a06f84fdb51d13e6.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-01be6ff9868e4844a06f84fdb51d13e6"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-fd70e4ff08b7419886f6f7d0582953b2") {
-      outputDiv = document.getElementById("altair-viz-fd70e4ff08b7419886f6f7d0582953b2");
+    if (outputDiv.id !== "altair-viz-01be6ff9868e4844a06f84fdb51d13e6") {
+      outputDiv = document.getElementById("altair-viz-01be6ff9868e4844a06f84fdb51d13e6");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -702,17 +881,16 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": "circle", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "Select"}, "value": 0.05}, "tooltip": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "selection": {"Select": {"type": "single", "fields": ["Major_Genre"], "init": {"Major_Genre": "Action"}, "bind": {"input": "select", "options": ["Action", "Adventure", "Black Comedy", "Comedy", "Concert/Performance", "Documentary", "Drama", "Horror", "Musical", "Romantic Comedy", "Thriller/Suspense", "Western"]}}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": {"type": "circle"}, "encoding": {"opacity": {"condition": {"param": "Select", "value": 0.75}, "value": 0.05}, "tooltip": {"field": "Title", "type": "nominal"}, "x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"field": "IMDB_Rating", "type": "quantitative"}}, "params": [{"name": "Select", "select": {"type": "point", "fields": ["Major_Genre"]}, "bind": {"input": "select", "options": ["Action", "Adventure", "Black Comedy", "Comedy", "Concert/Performance", "Documentary", "Drama", "Horror", "Musical", "Romantic Comedy", "Thriller/Suspense", "Western"]}, "value": [{"Major_Genre": "Action"}]}], "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>Our construction above leverages multiple aspects of selections:</p>
@@ -723,23 +901,23 @@
 <li><p>We <code class="docutils literal notranslate"><span class="pre">bind</span></code> the selection to an interface widget, in this case a drop-down menu via <code class="docutils literal notranslate"><span class="pre">binding_select</span></code>.</p></li>
 <li><p>As before, we then use a conditional encoding to control the opacity channel.</p></li>
 </ul>
-<div class="section" id="binding-selections-to-multiple-inputs">
-<h3><span class="section-number">6.3.1. </span>Binding Selections to Multiple Inputs<a class="headerlink" href="#binding-selections-to-multiple-inputs" title="Permalink to this headline">¶</a></h3>
+<section id="binding-selections-to-multiple-inputs">
+<h3><span class="section-number">6.3.1. </span>Binding Selections to Multiple Inputs<a class="headerlink" href="#binding-selections-to-multiple-inputs" title="Permalink to this heading">#</a></h3>
 <p>One selection instance can be bound to <em>multiple</em> dynamic query widgets. Let’s modify the example above to provide filters for <em>both</em> <code class="docutils literal notranslate"><span class="pre">Major_Genre</span></code> and <code class="docutils literal notranslate"><span class="pre">MPAA_Rating</span></code>, using radio buttons instead of a menu. Our <code class="docutils literal notranslate"><span class="pre">single</span></code> selection is now defined over a single <em>pair</em> of genre and MPAA rating values</p>
 <p><em>Look for surprising conjunctions of genre and rating. Are there any G or PG-rated horror films?</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># single-value selection over [Major_Genre, MPAA_Rating] pairs</span>
 <span class="c1"># use specific hard-wired values as the initial selected values</span>
-<span class="n">selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span>
+<span class="n">selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Select&#39;</span><span class="p">,</span>
     <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Major_Genre&#39;</span><span class="p">,</span> <span class="s1">&#39;MPAA_Rating&#39;</span><span class="p">],</span>
-    <span class="n">init</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Major_Genre&#39;</span><span class="p">:</span> <span class="s1">&#39;Drama&#39;</span><span class="p">,</span> <span class="s1">&#39;MPAA_Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;R&#39;</span><span class="p">},</span>
+    <span class="n">value</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;Major_Genre&#39;</span><span class="p">:</span> <span class="s1">&#39;Drama&#39;</span><span class="p">,</span> <span class="s1">&#39;MPAA_Rating&#39;</span><span class="p">:</span> <span class="s1">&#39;R&#39;</span><span class="p">}],</span>
     <span class="n">bind</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Major_Genre&#39;</span><span class="p">:</span> <span class="n">alt</span><span class="o">.</span><span class="n">binding_select</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">genres</span><span class="p">),</span> <span class="s1">&#39;MPAA_Rating&#39;</span><span class="p">:</span> <span class="n">alt</span><span class="o">.</span><span class="n">binding_radio</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">mpaa</span><span class="p">)}</span>
 <span class="p">)</span>
   
 <span class="c1"># scatter plot, modify opacity based on selection</span>
-<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span>
     <span class="n">selection</span>
 <span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Rotten_Tomatoes_Rating:Q&#39;</span><span class="p">,</span>
@@ -752,29 +930,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-50dbf8bff3ab40449c7b66382dce5275"></div>
+<style>
+  #altair-viz-44843bdef6d24128add54440bebe0240.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-44843bdef6d24128add54440bebe0240.vega-embed details,
+  #altair-viz-44843bdef6d24128add54440bebe0240.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-44843bdef6d24128add54440bebe0240"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-50dbf8bff3ab40449c7b66382dce5275") {
-      outputDiv = document.getElementById("altair-viz-50dbf8bff3ab40449c7b66382dce5275");
+    if (outputDiv.id !== "altair-viz-44843bdef6d24128add54440bebe0240") {
+      outputDiv = document.getElementById("altair-viz-44843bdef6d24128add54440bebe0240");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -789,23 +986,22 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": "circle", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "Select"}, "value": 0.05}, "tooltip": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "selection": {"Select": {"type": "single", "fields": ["Major_Genre", "MPAA_Rating"], "init": {"Major_Genre": "Drama", "MPAA_Rating": "R"}, "bind": {"Major_Genre": {"input": "select", "options": ["Action", "Adventure", "Black Comedy", "Comedy", "Concert/Performance", "Documentary", "Drama", "Horror", "Musical", "Romantic Comedy", "Thriller/Suspense", "Western"]}, "MPAA_Rating": {"input": "radio", "options": ["G", "PG", "PG-13", "R", "NC-17", "Not Rated"]}}}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": {"type": "circle"}, "encoding": {"opacity": {"condition": {"param": "Select", "value": 0.75}, "value": 0.05}, "tooltip": {"field": "Title", "type": "nominal"}, "x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"field": "IMDB_Rating", "type": "quantitative"}}, "params": [{"name": "Select", "select": {"type": "point", "fields": ["Major_Genre", "MPAA_Rating"]}, "bind": {"Major_Genre": {"input": "select", "options": ["Action", "Adventure", "Black Comedy", "Comedy", "Concert/Performance", "Documentary", "Drama", "Horror", "Musical", "Romantic Comedy", "Thriller/Suspense", "Western"]}, "MPAA_Rating": {"input": "radio", "options": ["G", "PG", "PG-13", "R", "NC-17", "Not Rated"]}}, "value": [{"Major_Genre": "Drama", "MPAA_Rating": "R"}]}], "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p><em>Fun facts: The PG-13 rating didn’t exist when the movies <a class="reference external" href="https://www.imdb.com/title/tt0073195/">Jaws</a> and <a class="reference external" href="https://www.imdb.com/title/tt0077766/">Jaws 2</a> were released. The first film to receive a PG-13 rating was 1984’s <a class="reference external" href="https://www.imdb.com/title/tt0087985/">Red Dawn</a>.</em></p>
-</div>
-<div class="section" id="using-visualizations-as-dynamic-queries">
-<h3><span class="section-number">6.3.2. </span>Using Visualizations as Dynamic Queries<a class="headerlink" href="#using-visualizations-as-dynamic-queries" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="using-visualizations-as-dynamic-queries">
+<h3><span class="section-number">6.3.2. </span>Using Visualizations as Dynamic Queries<a class="headerlink" href="#using-visualizations-as-dynamic-queries" title="Permalink to this heading">#</a></h3>
 <p>Though standard interface widgets show the <em>possible</em> query parameter values, they do not visualize the <em>distribution</em> of those values. We might also wish to use richer interactions, such as multi-value or interval selections, rather than input widgets that select only a single value at a time.</p>
 <p>To address these issues, we can author additional charts to both visualize data and support dynamic queries. Let’s add a histogram of the count of films per year and use an interval selection to dynamically highlight films over selected time periods.</p>
 <p><em>Interact with the year histogram to explore films from different time periods. Do you seen any evidence of <a class="reference external" href="https://en.wikipedia.org/wiki/Sampling_bias">sampling bias</a> across the years? (How do year and critics’ ratings relate?)</em></p>
@@ -817,7 +1013,7 @@
 <span class="p">)</span>
 
 <span class="c1"># dynamic query histogram</span>
-<span class="n">years</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+<span class="n">years</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span>
     <span class="n">brush</span>
 <span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;year(Release_Date):T&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Films by Release Year&#39;</span><span class="p">),</span>
@@ -844,29 +1040,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-e61532f607ff42fca47131943a8b25d9"></div>
+<style>
+  #altair-viz-95bf1dd2341546dd8710d62811113756.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-95bf1dd2341546dd8710d62811113756.vega-embed details,
+  #altair-viz-95bf1dd2341546dd8710d62811113756.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-95bf1dd2341546dd8710d62811113756"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e61532f607ff42fca47131943a8b25d9") {
-      outputDiv = document.getElementById("altair-viz-e61532f607ff42fca47131943a8b25d9");
+    if (outputDiv.id !== "altair-viz-95bf1dd2341546dd8710d62811113756") {
+      outputDiv = document.getElementById("altair-viz-95bf1dd2341546dd8710d62811113756");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -881,17 +1096,16 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "vconcat": [{"mark": "bar", "encoding": {"x": {"type": "temporal", "field": "Release_Date", "timeUnit": "year", "title": "Films by Release Year"}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "height": 50, "selection": {"selector007": {"type": "interval", "encodings": ["x"]}}, "width": 650}, {"mark": "circle", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "selector007"}, "value": 0.05}, "tooltip": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "height": 400, "width": 650}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "spacing": 5, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"mark": {"type": "bar"}, "encoding": {"x": {"field": "Release_Date", "timeUnit": "year", "title": "Films by Release Year", "type": "temporal"}, "y": {"aggregate": "count", "title": null, "type": "quantitative"}}, "height": 50, "name": "view_01f92194186aef94_0", "width": 650}, {"mark": {"type": "circle"}, "encoding": {"opacity": {"condition": {"param": "param_c97a99acfc68b794", "value": 0.75}, "value": 0.05}, "tooltip": {"field": "Title", "type": "nominal"}, "x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"field": "IMDB_Rating", "type": "quantitative"}}, "height": 400, "width": 650}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "params": [{"name": "param_c97a99acfc68b794", "select": {"type": "interval", "encodings": ["x"]}, "views": ["view_01f92194186aef94_0"]}], "spacing": 5, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>The example above provides dynamic queries using a <em>linked selection</em> between charts:</p>
@@ -901,17 +1115,17 @@
 <li><p>We use <code class="docutils literal notranslate"><span class="pre">brush</span></code> in a conditional encoding to adjust the scatter plot <code class="docutils literal notranslate"><span class="pre">opacity</span></code>.</p></li>
 </ul>
 <p>This interaction technique of selecting elements in one chart and seeing linked highlights in one or more other charts is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Brushing_and_linking"><em>brushing &amp; linking</em></a>.</p>
-</div>
-</div>
-<div class="section" id="panning-zooming">
-<h2><span class="section-number">6.4. </span>Panning &amp; Zooming<a class="headerlink" href="#panning-zooming" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="panning-zooming">
+<h2><span class="section-number">6.4. </span>Panning &amp; Zooming<a class="headerlink" href="#panning-zooming" title="Permalink to this heading">#</a></h2>
 <p>The movie rating scatter plot is a bit cluttered in places, making it hard to examine points in denser regions. Using the interaction techniques of <em>panning</em> and <em>zooming</em>, we can inspect dense regions more closely.</p>
 <p>Let’s start by thinking about how we might express panning and zooming using Altair selections. What defines the “viewport” of a chart? <em>Axis scale domains!</em></p>
 <p>We can change the scale domains to modify the visualized range of data values. To do so interactively, we can bind an <code class="docutils literal notranslate"><span class="pre">interval</span></code> selection to scale domains with the code <code class="docutils literal notranslate"><span class="pre">bind='scales'</span></code>. The result is that instead of an interval brush that we can drag and zoom, we instead can drag and zoom the entire plotting area!</p>
 <p><em>In the chart below, click and drag to pan (translate) the view, or scroll to zoom (scale) the view. What can you discover about the precision of the provided rating values?</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">selection_interval</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="s1">&#39;scales&#39;</span><span class="p">)</span>
 <span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Rotten_Tomatoes_Rating:Q&#39;</span><span class="p">,</span>
@@ -926,29 +1140,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-e2c99bb93da84b11a578c99f5be890d2"></div>
+<style>
+  #altair-viz-06d85668c6e24baf8d57ed25afd7be73.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-06d85668c6e24baf8d57ed25afd7be73.vega-embed details,
+  #altair-viz-06d85668c6e24baf8d57ed25afd7be73.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-06d85668c6e24baf8d57ed25afd7be73"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e2c99bb93da84b11a578c99f5be890d2") {
-      outputDiv = document.getElementById("altair-viz-e2c99bb93da84b11a578c99f5be890d2");
+    if (outputDiv.id !== "altair-viz-06d85668c6e24baf8d57ed25afd7be73") {
+      outputDiv = document.getElementById("altair-viz-06d85668c6e24baf8d57ed25afd7be73");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -963,17 +1196,16 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": "circle", "encoding": {"tooltip": [{"type": "nominal", "field": "Title"}, {"type": "nominal", "field": "Release_Date"}, {"type": "quantitative", "field": "IMDB_Rating"}, {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}], "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "axis": {"minExtent": 30}, "field": "IMDB_Rating"}}, "height": 400, "selection": {"selector008": {"type": "interval", "bind": "scales"}}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": {"type": "circle"}, "encoding": {"tooltip": [{"field": "Title", "type": "nominal"}, {"field": "Release_Date", "type": "nominal"}, {"field": "IMDB_Rating", "type": "quantitative"}, {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}], "x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"axis": {"minExtent": 30}, "field": "IMDB_Rating", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_f268f798f41c853e", "select": {"type": "interval"}, "bind": "scales"}], "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p><em>Zooming in, we can see that the rating values have limited precision! The Rotten Tomatoes ratings are integers, while the IMDB ratings are truncated to tenths. As a result, there is overplotting even when we zoom, with multiple movies sharing the same rating values.</em></p>
@@ -994,29 +1226,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-9041a16f89074da4bf9ac1a3a9cbc446"></div>
+<style>
+  #altair-viz-1231c7bd76624d36b3e747bebd24f3b3.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-1231c7bd76624d36b3e747bebd24f3b3.vega-embed details,
+  #altair-viz-1231c7bd76624d36b3e747bebd24f3b3.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-1231c7bd76624d36b3e747bebd24f3b3"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-9041a16f89074da4bf9ac1a3a9cbc446") {
-      outputDiv = document.getElementById("altair-viz-9041a16f89074da4bf9ac1a3a9cbc446");
+    if (outputDiv.id !== "altair-viz-1231c7bd76624d36b3e747bebd24f3b3") {
+      outputDiv = document.getElementById("altair-viz-1231c7bd76624d36b3e747bebd24f3b3");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -1031,23 +1282,22 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": "circle", "encoding": {"tooltip": [{"type": "nominal", "field": "Title"}, {"type": "nominal", "field": "Release_Date"}, {"type": "quantitative", "field": "IMDB_Rating"}, {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}], "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "axis": {"minExtent": 30}, "field": "IMDB_Rating"}}, "height": 400, "selection": {"selector009": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": {"type": "circle"}, "encoding": {"tooltip": [{"field": "Title", "type": "nominal"}, {"field": "Release_Date", "type": "nominal"}, {"field": "IMDB_Rating", "type": "quantitative"}, {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}], "x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"axis": {"minExtent": 30}, "field": "IMDB_Rating", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_1e9efca18e7a2868", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>By default, scale bindings for selections include both the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> encoding channels. What if we want to limit panning and zooming along a single dimension? We can invoke <code class="docutils literal notranslate"><span class="pre">encodings=['x']</span></code> to constrain the selection to the <code class="docutils literal notranslate"><span class="pre">x</span></code> channel only:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">selection_interval</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="s1">&#39;scales&#39;</span><span class="p">,</span> <span class="n">encodings</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
 <span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Rotten_Tomatoes_Rating:Q&#39;</span><span class="p">,</span>
@@ -1062,29 +1312,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-43a9d71d51814b5b8010ca8da9d2ead5"></div>
+<style>
+  #altair-viz-1f3da5bd1656426c99338aff42fa7623.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-1f3da5bd1656426c99338aff42fa7623.vega-embed details,
+  #altair-viz-1f3da5bd1656426c99338aff42fa7623.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-1f3da5bd1656426c99338aff42fa7623"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-43a9d71d51814b5b8010ca8da9d2ead5") {
-      outputDiv = document.getElementById("altair-viz-43a9d71d51814b5b8010ca8da9d2ead5");
+    if (outputDiv.id !== "altair-viz-1f3da5bd1656426c99338aff42fa7623") {
+      outputDiv = document.getElementById("altair-viz-1f3da5bd1656426c99338aff42fa7623");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -1099,23 +1368,22 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": "circle", "encoding": {"tooltip": [{"type": "nominal", "field": "Title"}, {"type": "nominal", "field": "Release_Date"}, {"type": "quantitative", "field": "IMDB_Rating"}, {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}], "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "axis": {"minExtent": 30}, "field": "IMDB_Rating"}}, "height": 400, "selection": {"selector010": {"type": "interval", "bind": "scales", "encodings": ["x"]}}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "mark": {"type": "circle"}, "encoding": {"tooltip": [{"field": "Title", "type": "nominal"}, {"field": "Release_Date", "type": "nominal"}, {"field": "IMDB_Rating", "type": "quantitative"}, {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}], "x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"axis": {"minExtent": 30}, "field": "IMDB_Rating", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_db82be42624d4632", "select": {"type": "interval", "encodings": ["x"]}, "bind": "scales"}], "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p><em>When zooming along a single axis only, the shape of the visualized data can change, potentially affecting our perception of relationships in the data. <a class="reference external" href="http://vis.stanford.edu/papers/arclength-banking">Choosing an appropriate aspect ratio</a> is an important visualization design concern!</em></p>
-</div>
-<div class="section" id="navigation-overview-detail">
-<h2><span class="section-number">6.5. </span>Navigation: Overview + Detail<a class="headerlink" href="#navigation-overview-detail" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="navigation-overview-detail">
+<h2><span class="section-number">6.5. </span>Navigation: Overview + Detail<a class="headerlink" href="#navigation-overview-detail" title="Permalink to this heading">#</a></h2>
 <p>When panning and zooming, we directly adjust the “viewport” of a chart. The related navigation strategy of <em>overview + detail</em> instead uses an overview display to show <em>all</em> of the data, while supporting selections that pan and zoom a separate focus display.</p>
 <p>Below we have two area charts showing a decade of price fluctuations for the S&amp;P 500 stock index. Initially both charts show the same data range. <em>Click and drag in the bottom overview chart to update the focus display and examine specific time spans.</em></p>
 <div class="cell docutils container">
@@ -1131,7 +1399,7 @@
   
 <span class="n">alt</span><span class="o">.</span><span class="n">vconcat</span><span class="p">(</span>
     <span class="n">base</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;date:T&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">brush</span><span class="p">))),</span>
-    <span class="n">base</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">brush</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">60</span><span class="p">),</span>
+    <span class="n">base</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span><span class="n">brush</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">60</span><span class="p">),</span>
     <span class="n">data</span><span class="o">=</span><span class="n">sp500</span>
 <span class="p">)</span>
 </pre></div>
@@ -1139,29 +1407,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-77f4a5f889e3451a9b93631624217f17"></div>
+<style>
+  #altair-viz-0b40f0335454457088a78c82cd9a3849.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-0b40f0335454457088a78c82cd9a3849.vega-embed details,
+  #altair-viz-0b40f0335454457088a78c82cd9a3849.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-0b40f0335454457088a78c82cd9a3849"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-77f4a5f889e3451a9b93631624217f17") {
-      outputDiv = document.getElementById("altair-viz-77f4a5f889e3451a9b93631624217f17");
+    if (outputDiv.id !== "altair-viz-0b40f0335454457088a78c82cd9a3849") {
+      outputDiv = document.getElementById("altair-viz-0b40f0335454457088a78c82cd9a3849");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -1176,36 +1463,35 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "vconcat": [{"mark": "area", "encoding": {"x": {"type": "temporal", "field": "date", "scale": {"domain": {"selection": "selector011"}}, "title": null}, "y": {"type": "quantitative", "field": "price"}}, "width": 700}, {"mark": "area", "encoding": {"x": {"type": "temporal", "field": "date", "title": null}, "y": {"type": "quantitative", "field": "price"}}, "height": 60, "selection": {"selector011": {"type": "interval", "encodings": ["x"]}}, "width": 700}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/sp500.csv"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"mark": {"type": "area"}, "encoding": {"x": {"field": "date", "scale": {"domain": {"param": "param_c97a99acfc68b794"}}, "title": null, "type": "temporal"}, "y": {"field": "price", "type": "quantitative"}}, "width": 700}, {"mark": {"type": "area"}, "encoding": {"x": {"field": "date", "title": null, "type": "temporal"}, "y": {"field": "price", "type": "quantitative"}}, "height": 60, "name": "view_4755cfa950f57438_1", "width": 700}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/sp500.csv"}, "params": [{"name": "param_c97a99acfc68b794", "select": {"type": "interval", "encodings": ["x"]}, "views": ["view_4755cfa950f57438_1"]}], "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>Unlike our earlier panning &amp; zooming case, here we don’t want to bind a selection directly to the scales of a single interactive chart. Instead, we want to bind the selection to a scale domain in <em>another</em> chart. To do so, we update the <code class="docutils literal notranslate"><span class="pre">x</span></code> encoding channel for our focus chart, setting the scale <code class="docutils literal notranslate"><span class="pre">domain</span></code> property to reference our <code class="docutils literal notranslate"><span class="pre">brush</span></code> selection. If no interval is defined (the selection is empty), Altair ignores the brush and uses the underlying data to determine the domain. When a brush interval is created, Altair instead uses that as the scale <code class="docutils literal notranslate"><span class="pre">domain</span></code> for the focus chart.</p>
-</div>
-<div class="section" id="details-on-demand">
-<h2><span class="section-number">6.6. </span>Details on Demand<a class="headerlink" href="#details-on-demand" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="details-on-demand">
+<h2><span class="section-number">6.6. </span>Details on Demand<a class="headerlink" href="#details-on-demand" title="Permalink to this heading">#</a></h2>
 <p>Once we spot points of interest within a visualization, we often want to know more about them. <em>Details-on-demand</em> refers to interactively querying for more information about selected values. <em>Tooltips</em> are one useful means of providing details on demand. However, tooltips typically only show information for one data point at a time. How might we show more?</p>
 <p>The movie ratings scatterplot includes a number of potentially interesting outliers where the Rotten Tomatoes and IMDB ratings disagree. Let’s create a plot that allows us to interactively select points and show their labels. To trigger the filter query on either the hover or click interaction, we will use the <a class="reference external" href="https://altair-viz.github.io/user_guide/interactions.html#composing-multiple-selections">Altair composition operator</a> <code class="docutils literal notranslate"><span class="pre">|</span></code> (“or”).</p>
 <p><em>Mouse over points in the scatter plot below to see a highlight and title label. Shift-click points to make annotations persistent and view multiple labels at once. Which movies are loved by Rotten Tomatoes critics, but not the general audience on IMDB (or vice versa)? See if you can find possible errors, where two different movies with the same name were accidentally combined!</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hover</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span>
-    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;mouseover&#39;</span><span class="p">,</span>  <span class="c1"># select on mouseover</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hover</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span>
+    <span class="n">toggle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;mouseover&#39;</span><span class="p">,</span>  <span class="c1"># select on mouseover</span>
     <span class="n">nearest</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>    <span class="c1"># select nearest point to mouse cursor</span>
-    <span class="n">empty</span><span class="o">=</span><span class="s1">&#39;none&#39;</span>     <span class="c1"># empty selection should match nothing</span>
+    <span class="n">empty</span><span class="o">=</span><span class="kc">False</span>     <span class="c1"># empty selection should match nothing</span>
 <span class="p">)</span>
 
-<span class="n">click</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span>
-    <span class="n">empty</span><span class="o">=</span><span class="s1">&#39;none&#39;</span> <span class="c1"># empty selection matches no points</span>
+<span class="n">click</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span>
+    <span class="n">empty</span><span class="o">=</span><span class="kc">False</span> <span class="c1"># empty selection matches no points</span>
 <span class="p">)</span>
 
 <span class="c1"># scatter plot encodings shared by all marks</span>
@@ -1221,7 +1507,7 @@
 
 <span class="c1"># layer scatter plot points, halo annotations, and title labels</span>
 <span class="n">alt</span><span class="o">.</span><span class="n">layer</span><span class="p">(</span>
-    <span class="n">plot</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">hover</span><span class="p">)</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">click</span><span class="p">),</span>
+    <span class="n">plot</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span><span class="n">hover</span><span class="p">)</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span><span class="n">click</span><span class="p">),</span>
     <span class="n">base</span><span class="o">.</span><span class="n">mark_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s1">&#39;firebrick&#39;</span><span class="p">,</span> <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
     <span class="n">base</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span><span class="n">dx</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">dy</span><span class="o">=-</span><span class="mi">8</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Title:N&#39;</span><span class="p">),</span>
     <span class="n">base</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span><span class="n">dx</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">dy</span><span class="o">=-</span><span class="mi">8</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Title:N&#39;</span><span class="p">),</span>
@@ -1235,29 +1521,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-5e0e25a2760b46aab9784c44c2632c3d"></div>
+<style>
+  #altair-viz-ecd60b0e28fb4f3aac79f461b2f33c92.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-ecd60b0e28fb4f3aac79f461b2f33c92.vega-embed details,
+  #altair-viz-ecd60b0e28fb4f3aac79f461b2f33c92.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-ecd60b0e28fb4f3aac79f461b2f33c92"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5e0e25a2760b46aab9784c44c2632c3d") {
-      outputDiv = document.getElementById("altair-viz-5e0e25a2760b46aab9784c44c2632c3d");
+    if (outputDiv.id !== "altair-viz-ecd60b0e28fb4f3aac79f461b2f33c92") {
+      outputDiv = document.getElementById("altair-viz-ecd60b0e28fb4f3aac79f461b2f33c92");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -1272,21 +1577,20 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "circle", "encoding": {"x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "selection": {"selector012": {"type": "single", "on": "mouseover", "nearest": true, "empty": "none"}, "selector013": {"type": "multi", "empty": "none"}}}, {"mark": {"type": "point", "size": 100, "stroke": "firebrick", "strokeWidth": 1}, "encoding": {"x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "transform": [{"filter": {"selection": {"or": ["selector012", "selector013"]}}}]}, {"mark": {"type": "text", "align": "right", "dx": 4, "dy": -8, "stroke": "white", "strokeWidth": 2}, "encoding": {"text": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "transform": [{"filter": {"selection": {"or": ["selector012", "selector013"]}}}]}, {"mark": {"type": "text", "align": "right", "dx": 4, "dy": -8}, "encoding": {"text": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "transform": [{"filter": {"selection": {"or": ["selector012", "selector013"]}}}]}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "height": 450, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "circle"}, "encoding": {"x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"field": "IMDB_Rating", "type": "quantitative"}}, "name": "view_7f8e1094e51e44bc_0"}, {"mark": {"type": "point", "size": 100, "stroke": "firebrick", "strokeWidth": 1}, "encoding": {"x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"field": "IMDB_Rating", "type": "quantitative"}}, "transform": [{"filter": {"or": [{"param": "param_a33cee647e091c34", "empty": false}, {"param": "param_74bbfe4b16a17eeb", "empty": false}]}}]}, {"mark": {"type": "text", "align": "right", "dx": 4, "dy": -8, "stroke": "white", "strokeWidth": 2}, "encoding": {"text": {"field": "Title", "type": "nominal"}, "x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"field": "IMDB_Rating", "type": "quantitative"}}, "transform": [{"filter": {"or": [{"param": "param_a33cee647e091c34", "empty": false}, {"param": "param_74bbfe4b16a17eeb", "empty": false}]}}]}, {"mark": {"type": "text", "align": "right", "dx": 4, "dy": -8}, "encoding": {"text": {"field": "Title", "type": "nominal"}, "x": {"field": "Rotten_Tomatoes_Rating", "type": "quantitative"}, "y": {"field": "IMDB_Rating", "type": "quantitative"}}, "transform": [{"filter": {"or": [{"param": "param_a33cee647e091c34", "empty": false}, {"param": "param_74bbfe4b16a17eeb", "empty": false}]}}]}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/movies.json"}, "height": 450, "params": [{"name": "param_a33cee647e091c34", "select": {"type": "point", "nearest": true, "on": "mouseover", "toggle": false}, "views": ["view_7f8e1094e51e44bc_0"]}, {"name": "param_74bbfe4b16a17eeb", "select": {"type": "point"}, "views": ["view_7f8e1094e51e44bc_0"]}], "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>The example above adds three new layers to the scatter plot: a circular annotation, white text to provide a legible background, and black text showing a film title. In addition, this example uses two selections in tandem:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>A single selection (<code class="docutils literal notranslate"><span class="pre">hover</span></code>) that includes <code class="docutils literal notranslate"><span class="pre">nearest=True</span></code> to automatically select the nearest data point as the mouse moves.</p></li>
 <li><p>A multi selection (<code class="docutils literal notranslate"><span class="pre">click</span></code>) to create persistent selections via shift-click.</p></li>
 </ol>
@@ -1295,11 +1599,11 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select a point for which to provide details-on-demand</span>
-<span class="n">label</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_single</span><span class="p">(</span>
-    <span class="n">encodings</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="c1"># limit selection to x-axis value</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_point</span><span class="p">(</span>
+    <span class="n">toggle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encodings</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="c1"># limit selection to x-axis value</span>
     <span class="n">on</span><span class="o">=</span><span class="s1">&#39;mouseover&#39;</span><span class="p">,</span>  <span class="c1"># select on mouseover events</span>
     <span class="n">nearest</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>    <span class="c1"># select data point nearest the cursor</span>
-    <span class="n">empty</span><span class="o">=</span><span class="s1">&#39;none&#39;</span>     <span class="c1"># empty selection includes no data points</span>
+    <span class="n">empty</span><span class="o">=</span><span class="kc">False</span>     <span class="c1"># empty selection includes no data points</span>
 <span class="p">)</span>
 
 <span class="c1"># define our base line chart of stock prices</span>
@@ -1320,7 +1624,7 @@
     <span class="c1"># add circle marks for selected time points, hide unselected points</span>
     <span class="n">base</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
         <span class="n">opacity</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">label</span><span class="p">),</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span><span class="n">label</span><span class="p">),</span>
 
     <span class="c1"># add white stroked text to provide a legible background for labels</span>
     <span class="n">base</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span><span class="n">align</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">dy</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
@@ -1342,29 +1646,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-f7d8ba2db70f4b839f564b106f4e1bc6"></div>
+<style>
+  #altair-viz-afd7ae34da9b4c408c797ae7b45f5751.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-afd7ae34da9b4c408c797ae7b45f5751.vega-embed details,
+  #altair-viz-afd7ae34da9b4c408c797ae7b45f5751.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-afd7ae34da9b4c408c797ae7b45f5751"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-f7d8ba2db70f4b839f564b106f4e1bc6") {
-      outputDiv = document.getElementById("altair-viz-f7d8ba2db70f4b839f564b106f4e1bc6");
+    if (outputDiv.id !== "altair-viz-afd7ae34da9b4c408c797ae7b45f5751") {
+      outputDiv = document.getElementById("altair-viz-afd7ae34da9b4c408c797ae7b45f5751");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -1379,23 +1702,22 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "line", "encoding": {"color": {"type": "nominal", "field": "symbol"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}}, {"mark": {"type": "rule", "color": "#aaa"}, "encoding": {"x": {"type": "temporal", "field": "date"}}, "transform": [{"filter": {"selection": "selector014"}}]}, {"mark": "circle", "encoding": {"color": {"type": "nominal", "field": "symbol"}, "opacity": {"condition": {"value": 1, "selection": "selector014"}, "value": 0}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "selection": {"selector014": {"type": "single", "encodings": ["x"], "on": "mouseover", "nearest": true, "empty": "none"}}}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "stroke": "white", "strokeWidth": 2}, "encoding": {"color": {"type": "nominal", "field": "symbol"}, "text": {"type": "quantitative", "field": "price"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "transform": [{"filter": {"selection": "selector014"}}]}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5}, "encoding": {"color": {"type": "nominal", "field": "symbol"}, "text": {"type": "quantitative", "field": "price"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "transform": [{"filter": {"selection": "selector014"}}]}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/stocks.csv"}, "height": 400, "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "line"}, "encoding": {"color": {"field": "symbol", "type": "nominal"}, "x": {"field": "date", "type": "temporal"}, "y": {"field": "price", "scale": {"type": "log"}, "type": "quantitative"}}}, {"mark": {"type": "rule", "color": "#aaa"}, "encoding": {"x": {"field": "date", "type": "temporal"}}, "transform": [{"filter": {"param": "param_29b47c205d4be516", "empty": false}}]}, {"mark": {"type": "circle"}, "encoding": {"color": {"field": "symbol", "type": "nominal"}, "opacity": {"condition": {"param": "param_29b47c205d4be516", "value": 1, "empty": false}, "value": 0}, "x": {"field": "date", "type": "temporal"}, "y": {"field": "price", "scale": {"type": "log"}, "type": "quantitative"}}, "name": "view_8042f8c9a257bf64_2"}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "stroke": "white", "strokeWidth": 2}, "encoding": {"color": {"field": "symbol", "type": "nominal"}, "text": {"field": "price", "type": "quantitative"}, "x": {"field": "date", "type": "temporal"}, "y": {"field": "price", "scale": {"type": "log"}, "type": "quantitative"}}, "transform": [{"filter": {"param": "param_29b47c205d4be516", "empty": false}}]}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5}, "encoding": {"color": {"field": "symbol", "type": "nominal"}, "text": {"field": "price", "type": "quantitative"}, "x": {"field": "date", "type": "temporal"}, "y": {"field": "price", "scale": {"type": "log"}, "type": "quantitative"}}, "transform": [{"filter": {"param": "param_29b47c205d4be516", "empty": false}}]}], "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/stocks.csv"}, "height": 400, "params": [{"name": "param_29b47c205d4be516", "select": {"type": "point", "encodings": ["x"], "nearest": true, "on": "mouseover", "toggle": false}, "views": ["view_8042f8c9a257bf64_2"]}], "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p><em>Putting into action what we’ve learned so far: can you modify the movie scatter plot above (the one with the dynamic query over years) to include a <code class="docutils literal notranslate"><span class="pre">rule</span></code> mark that shows the average IMDB (or Rotten Tomatoes) rating for the data contained within the year <code class="docutils literal notranslate"><span class="pre">interval</span></code> selection?</em></p>
-</div>
-<div class="section" id="brushing-linking-revisited">
-<h2><span class="section-number">6.7. </span>Brushing &amp; Linking, Revisited<a class="headerlink" href="#brushing-linking-revisited" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="brushing-linking-revisited">
+<h2><span class="section-number">6.7. </span>Brushing &amp; Linking, Revisited<a class="headerlink" href="#brushing-linking-revisited" title="Permalink to this heading">#</a></h2>
 <p>Earlier in this notebook we saw an example of <em>brushing &amp; linking</em>: using a dynamic query histogram to highlight points in a movie rating scatter plot. Here, we’ll visit some additional examples involving linked selections.</p>
 <p>Returning to the <code class="docutils literal notranslate"><span class="pre">cars</span></code> dataset, we can use the <code class="docutils literal notranslate"><span class="pre">repeat</span></code> operator to build a <a class="reference external" href="https://en.wikipedia.org/wiki/Scatter_plot#Scatterplot_matrices">scatter plot matrix (SPLOM)</a> that shows associations between mileage, acceleration, and horsepower. We can define an <code class="docutils literal notranslate"><span class="pre">interval</span></code> selection and include it <em>within</em> our repeated scatter plot specification to enable linked selections among all the plots.</p>
 <p><em>Click and drag in any of the plots below to perform brushing &amp; linking!</em></p>
@@ -1405,7 +1727,7 @@
     <span class="n">resolve</span><span class="o">=</span><span class="s1">&#39;global&#39;</span> <span class="c1"># resolve all selections to a single global instance</span>
 <span class="p">)</span>
 
-<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span>
     <span class="n">brush</span>
 <span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s1">&#39;column&#39;</span><span class="p">),</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;quantitative&#39;</span><span class="p">),</span>
@@ -1424,29 +1746,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-e7d6a8c76e8a41b5ab0453c346f031ee"></div>
+<style>
+  #altair-viz-cc20f8af44b64ec8acc3cd8d25fdf142.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-cc20f8af44b64ec8acc3cd8d25fdf142.vega-embed details,
+  #altair-viz-cc20f8af44b64ec8acc3cd8d25fdf142.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-cc20f8af44b64ec8acc3cd8d25fdf142"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-e7d6a8c76e8a41b5ab0453c346f031ee") {
-      outputDiv = document.getElementById("altair-viz-e7d6a8c76e8a41b5ab0453c346f031ee");
+    if (outputDiv.id !== "altair-viz-cc20f8af44b64ec8acc3cd8d25fdf142") {
+      outputDiv = document.getElementById("altair-viz-cc20f8af44b64ec8acc3cd8d25fdf142");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -1461,23 +1802,22 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "repeat": {"column": ["Acceleration", "Horsepower", "Miles_per_Gallon"], "row": ["Miles_per_Gallon", "Horsepower", "Acceleration"]}, "spec": {"data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/cars.json"}, "mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector015"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector015"}, "value": 0.1}, "x": {"type": "quantitative", "field": {"repeat": "column"}}, "y": {"type": "quantitative", "field": {"repeat": "row"}}}, "height": 140, "selection": {"selector015": {"type": "interval", "resolve": "global"}}, "width": 140}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "repeat": {"column": ["Acceleration", "Horsepower", "Miles_per_Gallon"], "row": ["Miles_per_Gallon", "Horsepower", "Acceleration"]}, "spec": {"data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/cars.json"}, "mark": {"type": "circle"}, "encoding": {"color": {"condition": {"param": "param_73031a0608c01713", "field": "Cylinders", "type": "ordinal"}, "value": "grey"}, "opacity": {"condition": {"param": "param_73031a0608c01713", "value": 0.8}, "value": 0.1}, "x": {"field": {"repeat": "column"}, "type": "quantitative"}, "y": {"field": {"repeat": "row"}, "type": "quantitative"}}, "height": 140, "name": "view_4dba048aa132f564_0", "width": 140}, "params": [{"name": "param_73031a0608c01713", "select": {"type": "interval", "resolve": "global"}, "views": ["view_4dba048aa132f564_0_child__row_Miles_per_Galloncolumn_Acceleration", "view_4dba048aa132f564_0_child__row_Miles_per_Galloncolumn_Horsepower", "view_4dba048aa132f564_0_child__row_Miles_per_Galloncolumn_Miles_per_Gallon", "view_4dba048aa132f564_0_child__row_Horsepowercolumn_Acceleration", "view_4dba048aa132f564_0_child__row_Horsepowercolumn_Horsepower", "view_4dba048aa132f564_0_child__row_Horsepowercolumn_Miles_per_Gallon", "view_4dba048aa132f564_0_child__row_Accelerationcolumn_Acceleration", "view_4dba048aa132f564_0_child__row_Accelerationcolumn_Horsepower", "view_4dba048aa132f564_0_child__row_Accelerationcolumn_Miles_per_Gallon"]}], "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>Note above the use of <code class="docutils literal notranslate"><span class="pre">resolve='global'</span></code> on the <code class="docutils literal notranslate"><span class="pre">interval</span></code> selection. The default setting of <code class="docutils literal notranslate"><span class="pre">'global'</span></code> indicates that across all plots only one brush can be active at a time. However, in some cases we might want to define brushes in multiple plots and combine the results. If we use <code class="docutils literal notranslate"><span class="pre">resolve='union'</span></code>, the selection will be the <em>union</em> of all brushes: if a point resides within any brush it will be selected. Alternatively, if we use <code class="docutils literal notranslate"><span class="pre">resolve='intersect'</span></code>, the selection will consist of the <em>intersection</em> of all brushes: only points that reside within all brushes will be selected.</p>
 <p><em>Try setting the <code class="docutils literal notranslate"><span class="pre">resolve</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">'union'</span></code> and <code class="docutils literal notranslate"><span class="pre">'intersect'</span></code> and see how it changes the resulting selection logic.</em></p>
-<div class="section" id="cross-filtering">
-<h3><span class="section-number">6.7.1. </span>Cross-Filtering<a class="headerlink" href="#cross-filtering" title="Permalink to this headline">¶</a></h3>
+<section id="cross-filtering">
+<h3><span class="section-number">6.7.1. </span>Cross-Filtering<a class="headerlink" href="#cross-filtering" title="Permalink to this heading">#</a></h3>
 <p>The brushing &amp; linking examples we’ve looked at all use conditional encodings, for example to change opacity values in response to a selection. Another option is to use a selection defined in one view to <em>filter</em> the content of another view.</p>
 <p>Let’s build a collection of histograms for the <code class="docutils literal notranslate"><span class="pre">flights</span></code> dataset: arrival <code class="docutils literal notranslate"><span class="pre">delay</span></code> (how early or late a flight arrives, in minutes), <code class="docutils literal notranslate"><span class="pre">distance</span></code> flown (in miles), and <code class="docutils literal notranslate"><span class="pre">time</span></code> of departure (hour of the day). We’ll use the <code class="docutils literal notranslate"><span class="pre">repeat</span></code> operator to create the histograms, and add an <code class="docutils literal notranslate"><span class="pre">interval</span></code> selection for the <code class="docutils literal notranslate"><span class="pre">x</span></code> axis with brushes resolved via intersection.</p>
 <p>In particular, each histogram will consist of two layers: a gray background layer and a blue foreground layer, with the foreground layer filtered by our intersection of brush selections. The result is a <em>cross-filtering</em> interaction across the three charts!</p>
@@ -1498,7 +1838,7 @@
 <span class="p">)</span>
   
 <span class="n">alt</span><span class="o">.</span><span class="n">layer</span><span class="p">(</span>
-    <span class="n">hist</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">brush</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">)),</span>
+    <span class="n">hist</span><span class="o">.</span><span class="n">add_params</span><span class="p">(</span><span class="n">brush</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">)),</span>
     <span class="n">hist</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="n">brush</span><span class="p">)</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
     <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
@@ -1517,29 +1857,48 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-043cb67391b04650abbd66c371c53c57"></div>
+<style>
+  #altair-viz-f3835e1e686b4c94afc5201c4d245cda.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-f3835e1e686b4c94afc5201c4d245cda.vega-embed details,
+  #altair-viz-f3835e1e686b4c94afc5201c4d245cda.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-f3835e1e686b4c94afc5201c4d245cda"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-043cb67391b04650abbd66c371c53c57") {
-      outputDiv = document.getElementById("altair-viz-043cb67391b04650abbd66c371c53c57");
+    if (outputDiv.id !== "altair-viz-f3835e1e686b4c94afc5201c4d245cda") {
+      outputDiv = document.getElementById("altair-viz-f3835e1e686b4c94afc5201c4d245cda");
     }
+
     const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -1554,42 +1913,41 @@
 
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "stroke": "transparent"}}, "repeat": {"row": ["delay", "distance", "time"]}, "spec": {"layer": [{"mark": "bar", "encoding": {"color": {"value": "lightgrey"}, "x": {"type": "quantitative", "axis": {"format": "d", "titleAnchor": "start"}, "bin": {"maxbins": 100, "minstep": 1}, "field": {"repeat": "row"}}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "selection": {"selector016": {"type": "interval", "encodings": ["x"], "resolve": "intersect"}}}, {"mark": "bar", "encoding": {"x": {"type": "quantitative", "axis": {"format": "d", "titleAnchor": "start"}, "bin": {"maxbins": 100, "minstep": 1}, "field": {"repeat": "row"}}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "transform": [{"filter": {"selection": "selector016"}}]}], "height": 100, "width": 900}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/flights-5k.json"}, "transform": [{"calculate": "datum.delay < 180 ? datum.delay : 180", "as": "delay"}, {"calculate": "hours(datum.date) + minutes(datum.date) / 60", "as": "time"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "stroke": "transparent"}}, "repeat": {"row": ["delay", "distance", "time"]}, "spec": {"layer": [{"mark": {"type": "bar"}, "encoding": {"color": {"value": "lightgrey"}, "x": {"axis": {"format": "d", "titleAnchor": "start"}, "bin": {"maxbins": 100, "minstep": 1}, "field": {"repeat": "row"}, "type": "quantitative"}, "y": {"aggregate": "count", "title": null, "type": "quantitative"}}, "name": "view_3f14742f86d3cf47_0"}, {"mark": {"type": "bar"}, "encoding": {"x": {"axis": {"format": "d", "titleAnchor": "start"}, "bin": {"maxbins": 100, "minstep": 1}, "field": {"repeat": "row"}, "type": "quantitative"}, "y": {"aggregate": "count", "title": null, "type": "quantitative"}}, "transform": [{"filter": {"param": "param_1693fa9d50447fe3"}}]}], "height": 100, "width": 900}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@1/data/flights-5k.json"}, "params": [{"name": "param_1693fa9d50447fe3", "select": {"type": "interval", "encodings": ["x"], "resolve": "intersect"}, "views": ["child__row_delay_view_3f14742f86d3cf47_0", "child__row_distance_view_3f14742f86d3cf47_0", "child__row_time_view_3f14742f86d3cf47_0"]}], "transform": [{"calculate": "datum.delay < 180 ? datum.delay : 180", "as": "delay"}, {"calculate": "hours(datum.date) + minutes(datum.date) / 60", "as": "time"}], "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json"}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p><em>By cross-filtering you can observe that delayed flights are more likely to depart at later hours. This phenomenon is familiar to frequent fliers: a delay can propagate through the day, affecting subsequent travel by that plane. For the best odds of an on-time arrival, book an early flight!</em></p>
 <p>The combination of multiple views and interactive selections can enable valuable forms of multi-dimensional reasoning, turning even basic histograms into powerful input devices for asking questions of a dataset!</p>
-</div>
-</div>
-<div class="section" id="summary">
-<h2><span class="section-number">6.8. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="summary">
+<h2><span class="section-number">6.8. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>For more information about the supported interaction options in Altair, please consult the <a class="reference external" href="https://altair-viz.github.io/user_guide/interactions.html">Altair interactive selection documentation</a>. For details about customizing event handlers, for example to compose multiple interaction techniques or support touch-based input on mobile devices, see the <a class="reference external" href="https://vega.github.io/vega-lite/docs/selection.html">Vega-Lite selection documentation</a>.</p>
 <p>Interested in learning more?</p>
 <ul class="simple">
 <li><p>The <em>selection</em> abstraction was introduced in the paper <a class="reference external" href="http://idl.cs.washington.edu/papers/vega-lite/">Vega-Lite: A Grammar of Interactive Graphics</a>, by Satyanarayan, Moritz, Wongsuphasawat, &amp; Heer.</p></li>
-<li><p>The PRIM-9 system (for projection, rotation, isolation, and masking in up to 9 dimensions) is one of the earliest interactive visualization tools, built in the early 1970s by Fisherkeller, Tukey, &amp; Friedman. <a class="reference external" href="http://stat-graphics.org/movies/prim9.html">A retro demo video survives!</a></p></li>
+<li><p>The PRIM-9 system (for projection, rotation, isolation, and masking in up to 9 dimensions) is one of the earliest interactive visualization tools, built in the early 1970s by Fisherkeller, Tukey, &amp; Friedman. <a class="reference external" href="https://www.youtube.com/watch?v=B7XoW2qiFUA">A retro demo video survives!</a></p></li>
 <li><p>The concept of brushing &amp; linking was crystallized by Becker, Cleveland, &amp; Wilks in their 1987 article <a class="reference external" href="https://scholar.google.com/scholar?cluster=14817303117298653693">Dynamic Graphics for Data Analysis</a>.</p></li>
 <li><p>For a comprehensive summary of interaction techniques for visualization, see <a class="reference external" href="https://queue.acm.org/detail.cfm?id=2146416">Interactive Dynamics for Visual Analysis</a> by Heer &amp; Shneiderman.</p></li>
 <li><p>Finally, for a treatise on what makes interaction effective, read the classic <a class="reference external" href="https://scholar.google.com/scholar?cluster=15702972136892195211">Direct Manipulation Interfaces</a> paper by Hutchins, Hollan, &amp; Norman.</p></li>
 </ul>
-<div class="section" id="appendix-on-the-representation-of-time">
-<h3><span class="section-number">6.8.1. </span>Appendix: On The Representation of Time<a class="headerlink" href="#appendix-on-the-representation-of-time" title="Permalink to this headline">¶</a></h3>
+<section id="appendix-on-the-representation-of-time">
+<h3><span class="section-number">6.8.1. </span>Appendix: On The Representation of Time<a class="headerlink" href="#appendix-on-the-representation-of-time" title="Permalink to this heading">#</a></h3>
 <p>Earlier we observed a small bump in the number of movies in either 1969 and 1970. Where does that bump come from? And why 1969 <em>or</em> 1970? The answer stems from a combination of missing data and how your computer represents time.</p>
 <p>Internally, dates and times are represented relative to the <a class="reference external" href="https://en.wikipedia.org/wiki/Unix_time">UNIX epoch</a>, in which time “zero” corresponds to the stroke of midnight on January 1, 1970 in <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC time</a>, which runs along the <a class="reference external" href="https://en.wikipedia.org/wiki/Prime_meridian">prime meridian</a>. It turns out there are a few movies with missing (<code class="docutils literal notranslate"><span class="pre">null</span></code>) release dates. Those <code class="docutils literal notranslate"><span class="pre">null</span></code> values get interpreted as time <code class="docutils literal notranslate"><span class="pre">0</span></code>, and thus map to January 1, 1970 in UTC time. If you live in the Americas – and thus in “earlier” time zones – this precise point in time corresponds to an earlier hour on December 31, 1969 in your local time zone. On the other hand, if you live near or east of the prime meridian, the date in your local time zone will be January 1, 1970.</p>
 <p>The takeaway? Always be skeptical of your data, and be mindful that how data is represented (whether as date times, or floating point numbers, or latitudes and longitudes, <em>etc.</em>) can sometimes lead to artifacts that impact analysis!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1603,7 +1961,7 @@
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1611,46 +1969,120 @@
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="altair_view_composition.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Multi-View Composition</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="altair_view_composition.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Multi-View Composition</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="altair_cartographic.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="altair_cartographic.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">7. </span>Cartographic Visualization</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-        
-        </div>
-    </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">6.1. Datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-selections">6.2. Introducing Selections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-queries">6.3. Dynamic Queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#binding-selections-to-multiple-inputs">6.3.1. Binding Selections to Multiple Inputs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-visualizations-as-dynamic-queries">6.3.2. Using Visualizations as Dynamic Queries</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panning-zooming">6.4. Panning &amp; Zooming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigation-overview-detail">6.5. Navigation: Overview + Detail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-on-demand">6.6. Details on Demand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brushing-linking-revisited">6.7. Brushing &amp; Linking, Revisited</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-filtering">6.7.1. Cross-Filtering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">6.8. Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-on-the-representation-of-time">6.8.1. Appendix: On The Representation of Time</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
