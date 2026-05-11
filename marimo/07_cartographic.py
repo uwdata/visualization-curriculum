@@ -381,7 +381,7 @@ def _(alt, zipcodes):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    _To zoom in on a specific digit, add a filter transform to limit the data shown! Try adding an [interactive selection](https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) to filter to a single digit and dynamically update the map. And be sure to use strings (\`'1'\`) instead of numbers (\`1\`) when filtering digit values!_
+    _To zoom in on a specific digit, add a filter transform to limit the data shown! Try adding an [interactive selection](https://github.com/uwdata/visualization-curriculum/blob/master/altair_interaction.ipynb) to filter to a single digit and dynamically update the map. And be sure to use strings (`'1'`) instead of numbers (`1`) when filtering digit values!_
 
     (This example is inspired by Ben Fry's classic [zipdecode](https://benfry.com/zipdecode/) visualization!)
 
@@ -564,7 +564,7 @@ def _(mo):
     mo.md(r"""
     _Which U.S. airports have the highest number of outgoing routes?_
 
-    Now that we can see the airports, which may wish to interact with them to better understand the structure of the air traffic network. We can add a `rule` mark layer to represent paths from `origin` airports to `destination` airports, which requires two `lookup` transforms to retrieve coordinates for each end point. In addition, we can use a `single` selection to filter these routes, such that only the routes originating at the currently selected airport are shown.
+    Now that we can see the airports, which may wish to interact with them to better understand the structure of the air traffic network. We can add a `rule` mark layer to represent paths from `origin` airports to `destination` airports, which requires two `lookup` transforms to retrieve coordinates for each end point. In addition, we can use a point selection to filter these routes, such that only the routes originating at the currently selected airport are shown.
 
     _Starting from the static map above, can you build an interactive version? Feel free to skip the code below to engage with the interactive map first, and think through how you might build it on your own!_
     """)
@@ -576,8 +576,8 @@ def _(airports, alt, flights, usa):
     # interactive selection for origin airport
     # select nearest airport to mouse cursor
     origin = alt.selection_point(
-        on='mouseover', nearest=True,
-        fields=['origin'], empty='none'
+        toggle=False, on='mouseover', nearest=True,
+        fields=['origin'], empty=False
     )
 
     # shared data reference for lookup transforms

@@ -686,7 +686,7 @@ def _(alt, antibiotics):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    _Hmm... While the data are better segregated by genus, this cacapohony of colors doesn't seem particularly useful._
+    _Hmm... While the data are better segregated by genus, this cacophony of colors doesn't seem particularly useful._
 
     _If we look at some of the previous charts carefully, we can see that only a handful of bacteria have a genus shared with another bacteria: Salmonella, Staphylococcus, and Streptococcus. To focus our comparison, we might add colors only for these repeated genus values._
 

@@ -623,9 +623,9 @@ def _(mo):
     <!DOCTYPE html>
     <html>
       <head>
-        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
       </head>
       <body>
       <div id="vis"></div>
