@@ -89,7 +89,7 @@ def _(data):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    693 rows and 6 columns! Let's take a peek at the data content:
+    682 rows and 6 columns! Let's take a peek at the data content:
     """)
     return
 
@@ -1061,7 +1061,7 @@ def _(alt, dataNA):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    We can see a larger range of values in 1995, from just under 4 to just under 7. By 2005, both the overall fertility values and the variability have declined, centered around 2 children per familty.
+    We can see a larger range of values in 1955, from just under 4 to just under 7. By 2005, both the overall fertility values and the variability have declined, centered around 2 children per family.
     """)
     return
 

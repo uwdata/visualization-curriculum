@@ -55,7 +55,7 @@ def _(mo):
     mo.md(r"""
     We will be working with a table of data about motion pictures, taken from the [vega-datasets](https://vega.github.io/vega-datasets/) collection. The data includes variables such as the film name, director, genre, release date, ratings, and gross revenues. However, _be careful when working with this data_: the films are from unevenly sampled years, using data combined from multiple sources. If you dig in you will find issues with missing values and even some subtle errors! Nevertheless, the data should prove interesting to explore...
 
-    Let's retrieve the URL for the JSON data file from the datasets package, and then read the data into a Pandas data frame so that we can inspect its contents.
+    Let's read the JSON data file into a Pandas data frame from a URL so that we can inspect its contents.
     """)
     return
 

@@ -70,7 +70,7 @@ def _(mo):
     conda install -c conda-forge altair
     ```
 
-    You can run command line commands from a code cell by prefixing it with `!`. For example, to install Altair and Vega Datasets with [Pip](https://pip.pypa.io/), you can run the following cell.
+    You can run command line commands from a code cell by prefixing it with `!`. For example, to install Altair with [Pip](https://pip.pypa.io/), you can run the following cell.
     """)
     return
 
@@ -130,7 +130,7 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    If you are not running the latest version, you can update it with `pip`. You can update Altair and Vega Datasets by running this command in your terminal.
+    If you are not running the latest version, you can update it with `pip`. You can update Altair by running this command in your terminal.
 
     ```
     pip install -U altair
@@ -213,7 +213,7 @@ def _(mo):
     mo.md(r"""
     ## Display Troubleshooting
 
-    If you are having issues with seeing a chart, make sure your setup is correct by following the [debugging instruction above](#Installation). If you are still having issues, follow the [instruction about debugging display issues in the Altair documentation](https://iliatimofeev.github.io/altair-viz.github.io/user_guide/troubleshooting.html).
+    If you are having issues with seeing a chart, make sure your setup is correct by following the [debugging instruction above](#Installation). If you are still having issues, follow the [instruction about debugging display issues in the Altair documentation](https://altair-viz.github.io/user_guide/troubleshooting.html).
     """)
     return
 
@@ -223,7 +223,7 @@ def _(mo):
     mo.md(r"""
     ### Non Existent Fields
 
-    A common error is [accidentally using a field that does not exist](https://iliatimofeev.github.io/altair-viz.github.io/user_guide/troubleshooting.html#plot-displays-but-the-content-is-empty).
+    A common error is [accidentally using a field that does not exist](https://altair-viz.github.io/user_guide/troubleshooting.html#plot-displays-but-the-content-is-empty).
     """)
     return
 

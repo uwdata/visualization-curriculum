@@ -97,7 +97,7 @@ def _(mo):
     mo.md(r"""
     Let's start with a basic selection: simply clicking a point to highlight it. Using the `cars` dataset, we'll start with a scatter plot of horsepower versus miles per gallon, with a color encoding for the number cylinders in the car engine.
 
-    In addition, we'll create a selection instance by calling `alt.selection_single()`, indicating we want a selection defined over a _single value_. By default, the selection uses a mouse click to determine the selected value. To register a selection with a chart, we must add it using the `.add_params()` method.
+    In addition, we'll create a selection instance by calling `alt.selection_point(toggle=False)`, indicating we want a selection defined over a _single value_. By default, the selection uses a mouse click to determine the selected value. To register a selection with a chart, we must add it using the `.add_params()` method.
 
     Once our selection has been defined, we can use it as a parameter for _conditional encodings_, which apply a different encoding depending on whether a data record lies in or out of the selection. For example, consider the following code:
 
@@ -122,11 +122,11 @@ def _(alt, cars):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Of course, highlighting individual data points one-at-a-time is not particularly exciting! As we'll see, however, single value selections provide a useful building block for more powerful interactions. Moreover, single value selections are just one of the three selection types provided by Altair:
+    Of course, highlighting individual data points one-at-a-time is not particularly exciting! As we'll see, however, single value selections provide a useful building block for more powerful interactions. Moreover, single value selections are just one of the selection types provided by Altair:
 
-    - `selection_single` - select a single discrete value, by default on click events.
-    - `selection_multi` - select multiple discrete values. The first value is selected on mouse click and additional values toggled using shift-click.
-    - `selection_interval` - select a continuous range of values, initiated by mouse drag.
+    - `selection_point(toggle=False)` - select a single discrete value, by default on click events.
+    - `selection_point()` - select multiple discrete values. The first value is selected on mouse click and additional values toggled using shift-click.
+    - `selection_interval()` - select a continuous range of values, initiated by mouse drag.
 
     Let's compare each of these selection types side-by-side. To keep our code tidy we'll first define a function (`plot`) that generates a scatter plot specification just like the one above. We can pass a selection to the `plot` function to have it applied to the chart:
     """)
@@ -250,7 +250,7 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Now let's create a `single` selection bound to a drop-down menu.
+    Now let's create a point selection bound to a drop-down menu.
 
     *Use the dynamic query menu below to explore the data. How do ratings vary by genre? How would you revise the code to filter `MPAA_Rating` (G, PG, PG-13, etc.) instead of `Major_Genre`?*
     """)
@@ -284,8 +284,8 @@ def _(mo):
     Our construction above leverages multiple aspects of selections:
 
     - We give the selection a name (`'Select'`). This name is not required, but allows us to influence the label text of the generated dynamic query menu. (_What happens if you remove the name? Try it!_)
-    - We constrain the selection to a specific data field (`Major_Genre`). Earlier when we used a `single` selection, the selection mapped to individual data points. By limiting the selection to a specific field, we can select _all_ data points whose `Major_Genre` field value matches the single selected value.
-    - We initialize `init=...` the selection to a starting value.
+    - We constrain the selection to a specific data field (`Major_Genre`). Earlier when we used a point selection, it mapped to individual data points. By limiting the selection to a specific field, we can select _all_ data points whose `Major_Genre` field value matches the selected value.
+    - We set the initial selection state with `value=...`.
     - We `bind` the selection to an interface widget, in this case a drop-down menu via `binding_select`.
     - As before, we then use a conditional encoding to control the opacity channel.
     """)
@@ -297,7 +297,7 @@ def _(mo):
     mo.md(r"""
     ### Binding Selections to Multiple Inputs
 
-    One selection instance can be bound to _multiple_ dynamic query widgets. Let's modify the example above to provide filters for _both_ `Major_Genre` and `MPAA_Rating`, using radio buttons instead of a menu. Our `single` selection is now defined over a single _pair_ of genre and MPAA rating values
+    One selection instance can be bound to _multiple_ dynamic query widgets. Let's modify the example above to provide filters for _both_ `Major_Genre` and `MPAA_Rating`, using radio buttons instead of a menu. Our point selection is now defined over a single _pair_ of genre and MPAA rating values.
 
     _Look for surprising conjunctions of genre and rating. Are there any G or PG-rated horror films?_
     """)
@@ -525,10 +525,10 @@ def _(mo):
     mo.md(r"""
     The example above adds three new layers to the scatter plot: a circular annotation, white text to provide a legible background, and black text showing a film title. In addition, this example uses two selections in tandem:
 
-    1. A single selection (`hover`) that includes `nearest=True` to automatically select the nearest data point as the mouse moves.
-    2. A multi selection (`click`) to create persistent selections via shift-click.
+    1. A single-point selection (`hover`) that uses `toggle=False` and includes `nearest=True` to automatically select the nearest data point as the mouse moves.
+    2. A multi-point selection (`click`) to create persistent selections via shift-click.
 
-    Both selections include the set `empty='none'` to indicate that no points should be included if a selection is empty. These selections are then combined into a single filter predicate &mdash; the logical _or_ of `hover` and `click` &mdash; to include points that reside in _either_ selection. We use this predicate to filter the new layers to show annotations and labels for selected points only.
+    Both selections include the setting `empty=False` to indicate that no points should be included if a selection is empty. These selections are then combined into a single filter predicate &mdash; the logical _or_ of `hover` and `click` &mdash; to include points that reside in _either_ selection. We use this predicate to filter the new layers to show annotations and labels for selected points only.
     """)
     return
 
